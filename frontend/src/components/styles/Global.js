@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
    .App {
     max-width: 2000px;
     width: 100%;
-    border: 2px solid ${({ theme }) => theme.colors.greyishNavy};
+    /* border: 2px solid ${({ theme }) => theme.colors.greyishNavy}; */
     background: ${({ theme }) => theme.colors.white};
     /* font-family: ${({ theme }) => theme.fontFamily.primary}; */
 
