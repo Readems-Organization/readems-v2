@@ -22,7 +22,7 @@ const WaitList = () => {
             </h1>
             <p>Discover books, stories and article from writers</p>
           </StyledWaitlistHeader>
-          <StyledWaitlistButton>Join Our Waitlist</StyledWaitlistButton>
+          <StyledWaitlistButton>Join Our Waitlists</StyledWaitlistButton>
         </StyledWaitlistWrapper>
       </StyledWaitListContainer>
     </div>

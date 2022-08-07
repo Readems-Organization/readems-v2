@@ -12,7 +12,8 @@ export const StyledNavContainer = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 2px solid red;
+  margin-bottom: 80px;
+  /* border: 2px solid red; */
 
   @media (max-width: ${({ theme }) => theme.mobile.size1100}) {
     flex-direction: column;

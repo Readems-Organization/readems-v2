@@ -42,7 +42,7 @@ const HomePageNav = ({ toggleSidebar }) => {
         </StyledNavLists>
       </StyledNavLeft>
       <StyledNavRight>
-        <StyledNavButton>Join Our Waitlist</StyledNavButton>
+        <StyledNavButton>Join Our Waitlists</StyledNavButton>
       </StyledNavRight>
     </StyledNavContainer>
   );
