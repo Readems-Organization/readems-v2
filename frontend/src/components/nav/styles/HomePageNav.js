@@ -2,18 +2,19 @@ import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledNavContainer = styled(motion.div)`
-  height: 70px;
+  /* height: 70px;
   width: 100%;
   position: sticky;
   top: 0;
-  left: 0;
+  left: 0; */
   background: inherit;
   padding: 10px 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
   /* border: 2px solid red; */
+  position: relative;
 
   @media (max-width: ${({ theme }) => theme.mobile.size1100}) {
     flex-direction: column;
@@ -62,17 +63,21 @@ export const StyledNavLeft = styled.div`
   }
 `;
 
+export const StyledLogo = styled(motion.div)``;
+
 export const StyledMenu = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.white};
+  /* border: 1px solid ${({ theme }) => theme.colors.white}; */
   padding: 5px;
   border-radius: 5px;
+  position: absolute;
+  left: 0;
   svg {
     display: flex;
     align-items: center;
-    font-size: 35px;
-    display: none;
+    font-size: 30px;
+    /* display: flex; */
     cursor: pointer;
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.black};
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
@@ -160,7 +165,7 @@ export const StyledNavRight = styled.div`
   }
 `;
 
-export const StyledNavButton = styled.button`
+export const StyledNavButton = styled(motion.button)`
   /* background: #ff7800; */
   /* background: #f36b07de; */
   background: #0042ff;

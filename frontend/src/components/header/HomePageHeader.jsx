@@ -7,7 +7,7 @@ import { AnimatePresence } from 'framer-motion';
 import Sidebar from '../sidebar/Sidebar';
 
 const HomePageHeader = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleSidebar = () => setIsOpen(true);
   return (

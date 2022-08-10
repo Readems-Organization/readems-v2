@@ -1,6 +1,6 @@
 export const fontFamily = {
   fontFamily: {
-    primary: '"Work Sans", sans-serif',
+    primary: '"Lato", sans-serif',
     header: 'Poppins, sans-serif',
     cursive: 'cursive',
   },

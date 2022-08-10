@@ -5,9 +5,22 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box ;
-    /* font-family: cursive; */
-    font-family: ${({ theme }) => theme.fontFamily.cursive};
 
+  }
+
+  html {
+  overflow: scroll;
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+    ::-webkit-scrollbar {
+    /* display: none; */
+    width: 0;
+    /* background: transparent; */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ff0000;
+  }
   }
 
    .App {
@@ -18,14 +31,13 @@ export const GlobalStyle = createGlobalStyle`
     /* font-family: ${({ theme }) => theme.fontFamily.primary}; */
 
 
-
   }
 
   body, h1, h2, h3, h4, h5, h6, p, ol, ul, button, span {
     margin: 0;
     padding: 0;
     font-family: ${({ theme }) => theme.fontFamily.primary};
-    /* color: ${({ theme }) => theme.colors.midnight0}; */
+
   }
 
 

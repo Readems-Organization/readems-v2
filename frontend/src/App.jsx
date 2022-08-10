@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePageHeader from './components/header/HomePageHeader';
 
 import Nav from './components/nav/Nav';
+
 import { Home, Books, Signin, WaitList } from './routes';
 
 const App = () => {
@@ -10,7 +12,7 @@ const App = () => {
       <BrowserRouter>
         <input type='checkbox' id='theme' />
         <div className='App'>
-          <Nav />
+          <HomePageHeader />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/books' element={<Books />} />

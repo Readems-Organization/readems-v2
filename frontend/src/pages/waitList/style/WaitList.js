@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const StyledWaitListContainer = styled.div`
   position: relative;
@@ -44,12 +45,12 @@ export const StyledWaitlistImg = styled.img`
     `}
 
     ${(props) =>
-    props.third &&
-    css`
-      position: absolute;
-      bottom: 170px;
-      right: 20px;
-    `}
+      props.third &&
+      css`
+        position: absolute;
+        bottom: 170px;
+        right: 20px;
+      `}
 
       @media (max-width: ${({ theme }) => theme.mobile.size900}) {
     ${(props) =>
@@ -89,7 +90,7 @@ export const StyledWaitlistImg = styled.img`
   }
 `;
 
-export const StyledWaitlistHeader = styled.div`
+export const StyledWaitlistHeaderContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,8 +98,8 @@ export const StyledWaitlistHeader = styled.div`
   text-align: center;
   /* border: 2px solid blue; */
   height: 62vh;
-  font-family: 'Lato';
-  h1 {
+  /* font-family: 'Lato'; */
+  /* h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,37 +109,37 @@ export const StyledWaitlistHeader = styled.div`
     line-height: 120px;
     z-index: 999;
     font-weight: 500;
-  }
+  } */
 
-  p {
+  /* p {
     color: #777;
     font-size: 40px;
-  }
+  } */
 
   @media (max-width: ${({ theme }) => theme.mobile.size1100}) {
-    h1 {
+    /* h1 {
       font-size: 75px;
       line-height: 80px;
     }
     p {
       font-size: 30px;
-    }
+    } */
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size900}) {
-    h1 {
+    /* h1 {
       font-size: 55px;
     }
     p {
       font-size: 20px;
-    }
+    } */
   }
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
     height: 40vh;
-    h1 {
+    /* h1 {
       font-size: 45px;
       line-height: 60px;
-    }
+    } */
   }
   @media (max-width: ${({ theme }) => theme.mobile.size520}) {
     height: 50vh;
@@ -162,7 +163,24 @@ export const StyledWaitlistHeader = styled.div`
   }
 `;
 
-export const StyledWaitlistButton = styled.button`
+export const StyledWaitlistHeader = styled(motion.h1)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 90px;
+  letter-spacing: 2px;
+  line-height: 120px;
+  z-index: 99;
+  font-weight: 500;
+`;
+
+export const StyledWaitlistSubHeader = styled(motion.p)`
+  color: #777;
+  font-size: 40px;
+`;
+
+export const StyledWaitlistButton = styled(motion.button)`
   display: flex;
   flex-direction: column;
   justify-content: center;
