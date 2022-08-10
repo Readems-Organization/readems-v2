@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePageHeader from './components/header/HomePageHeader';
+import Header from './components/header/Header';
 
 import Nav from './components/nav/Nav';
 
 import { Home, Books, Signin, WaitList } from './routes';
 
 const App = () => {
+  const [auth, setAuth] = useState(false);
   return (
     <>
       <BrowserRouter>
         <input type='checkbox' id='theme' />
         <div className='App'>
-          <HomePageHeader />
+          <Header />
+
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/' element={auth ? <Home /> : <WaitList />} />
             <Route path='/books' element={<Books />} />
             <Route path='/users/signin' element={<Signin />} />
             <Route path='/users/waitlist' element={<WaitList />} />

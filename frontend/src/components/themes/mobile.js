@@ -1,4 +1,5 @@
 export const mobile = {
+  size375: '375px',
   size420: '420px',
   size520: '520px',
   size768: '768px',
