@@ -36,7 +36,7 @@ export const StyledHeaderLeftWrapper = styled(motion.div)`
     }
   }
 
-  @media (max-width: ${({ theme }) => theme.mobile.size520}) {
+  @media (max-width: ${({ theme }) => theme.mobile.size540}) {
     img {
       width: 110px;
       margin-left: 30px;
@@ -75,7 +75,7 @@ export const StyledHeaderNav = styled(motion.ul)`
     gap: 10px;
   }
 
-  @media (max-width: ${({ theme }) => theme.mobile.size520}) {
+  @media (max-width: ${({ theme }) => theme.mobile.size540}) {
     display: none;
   }
 `;
@@ -86,6 +86,7 @@ export const StyledHeaderBtn = styled(motion.button)`
   font-size: 14px;
   padding: 10px 10px;
   border-radius: 5px;
+  text-transform: capitalize;
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
     font-size: 12px;

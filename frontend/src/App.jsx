@@ -4,7 +4,7 @@ import Header from './components/header/Header';
 
 import Nav from './components/nav/Nav';
 
-import { Home, Books, Signin, WaitList } from './routes';
+import { Home, Books, Signin, Waitlists } from './routes';
 
 const App = () => {
   const [auth, setAuth] = useState(false);
@@ -16,10 +16,10 @@ const App = () => {
           <Header />
 
           <Routes>
-            <Route path='/' element={auth ? <Home /> : <WaitList />} />
+            <Route path='/' element={auth ? <Home /> : <Waitlists />} />
             <Route path='/books' element={<Books />} />
             <Route path='/users/signin' element={<Signin />} />
-            <Route path='/users/waitlist' element={<WaitList />} />
+            <Route path='/users/waitlist' element={<Waitlists />} />
           </Routes>
         </div>
       </BrowserRouter>
