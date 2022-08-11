@@ -25,7 +25,7 @@ export const StyledSidebarWrapper = styled.div`
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   /* box-shadow: 0px 0px 5px gray; */
-  z-index: 1200px;
+  z-index: 1990;
 
   :hover {
     width: 250px;

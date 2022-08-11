@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const StyledHeaderContainer = styled(motion.header)`
   width: 100%;
   height: 70px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,38 +19,17 @@ export const StyledHeaderContainer = styled(motion.header)`
 export const StyledHeaderLeftWrapper = styled(motion.div)`
   display: flex;
   align-items: center;
-  margin-right: 20px;
-  img {
-    margin-left: 30px;
-  }
+  /* margin-right: 20px; */
 
   svg {
     display: none;
     cursor: pointer;
-  }
-
-  @media (max-width: ${({ theme }) => theme.mobile.size768}) {
-    img {
-      width: 90px;
-      margin-left: 7px;
-    }
+    margin-right: 15px;
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size540}) {
-    img {
-      width: 110px;
-      margin-left: 30px;
-    }
-
     svg {
       display: block;
-    }
-  }
-
-  @media (max-width: ${({ theme }) => theme.mobile.size375}) {
-    img {
-      width: 90px;
-      margin-left: 30px;
     }
   }
 `;
@@ -58,6 +37,26 @@ export const StyledHeaderRightWrapper = styled(motion.div)``;
 
 export const StyledLogo = styled(motion.img)`
   width: 120px;
+
+  @media (max-width: ${({ theme }) => theme.mobile.size768}) {
+    width: 90px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile.size540}) {
+    width: 110px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile.size420}) {
+    display: none;
+  }
+`;
+
+export const StyledLogoSmall = styled(motion.img)`
+  width: 35px;
+  display: none;
+  @media (max-width: ${({ theme }) => theme.mobile.size420}) {
+    display: block;
+  }
 `;
 
 export const StyledHeaderNav = styled(motion.ul)`
@@ -69,6 +68,17 @@ export const StyledHeaderNav = styled(motion.ul)`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: 03s ease;
+
+    a {
+      font-size: 20px;
+      transition: 02s ease all;
+
+      :hover {
+        color: #0042ff;
+        font-size: 18px;
+      }
+    }
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {

@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import {
   StyledHeaderContainer,
   StyledLogo,
+  StyledLogoSmall,
   StyledHeaderNav,
   StyledHeaderBtn,
   StyledHeaderLeftWrapper,
-  StyledHeaderRightWrapper,
 } from './styles/Header';
-// import HomePageNav from '../nav/Nav';
-import { AnimatePresence } from 'framer-motion';
 // import Sidebar from '../sidebar/Sidebar';
 import AppIcon from '../Icons/AppIcon';
-import { logo } from '../images';
+import { logo, logo2 } from '../images';
+import Sidebar from '../sidebar/SidebarSecond';
 
 const containerVariants = {
   hidden: {
@@ -34,47 +34,55 @@ const containerVariants = {
 };
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <StyledHeaderContainer
-      variants={containerVariants}
-      initial='hidden'
-      animate='visible'
-      exit='exit'
-    >
-      <StyledHeaderLeftWrapper>
-        <AppIcon.Menu />
-        <StyledLogo
-          src={logo}
-          alt='logo'
+    <>
+      <StyledHeaderContainer
+        variants={containerVariants}
+        initial='hidden'
+        animate='visible'
+        exit='exit'
+      >
+        <StyledHeaderLeftWrapper>
+          <AppIcon.Menu onClick={() => setIsOpen(true)} />
+          <StyledLogo
+            src={logo}
+            alt='logo'
+            initial={{ y: -550 }}
+            animate={{ y: 0 }}
+            transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
+          />
+          <StyledLogoSmall src={logo2} alt='logo' />
+        </StyledHeaderLeftWrapper>
+
+        <StyledHeaderNav>
+          <li>
+            <Link to='/'>Explore</Link>
+          </li>
+          <li>
+            <Link to='/'>Pricing</Link>
+          </li>
+          <li>
+            <Link to='/'>Writers</Link>
+          </li>
+          <li>
+            <Link to='/'>Readers</Link>
+          </li>
+        </StyledHeaderNav>
+
+        <StyledHeaderBtn
           initial={{ y: -550 }}
           animate={{ y: 0 }}
           transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
-        />
-      </StyledHeaderLeftWrapper>
-
-      <StyledHeaderNav>
-        <li>
-          <Link to='/'>Explore</Link>
-        </li>
-        <li>
-          <Link to='/'>Pricing</Link>
-        </li>
-        <li>
-          <Link to='/'>Writers</Link>
-        </li>
-        <li>
-          <Link to='/'>Readers</Link>
-        </li>
-      </StyledHeaderNav>
-
-      <StyledHeaderBtn
-        initial={{ y: -550 }}
-        animate={{ y: 0 }}
-        transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
-      >
-        Join our waitlists
-      </StyledHeaderBtn>
-    </StyledHeaderContainer>
+        >
+          Join our waitlists
+        </StyledHeaderBtn>
+      </StyledHeaderContainer>
+      <AnimatePresence>
+        {isOpen && <Sidebar setIsOpen={setIsOpen} />}
+      </AnimatePresence>
+    </>
   );
 };
 

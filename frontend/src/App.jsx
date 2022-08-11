@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
 
-import Nav from './components/nav/Nav';
-
 import { Home, Books, Signin, Waitlists } from './routes';
 
 const App = () => {
