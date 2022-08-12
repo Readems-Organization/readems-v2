@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledWaitlistFormContainer = styled(motion.div)`
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   border: 2px solid #fff;
   background: #fff;
   z-index: 5000;

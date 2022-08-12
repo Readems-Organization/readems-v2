@@ -1,4 +1,6 @@
 import React from 'react';
+import { AnimatePresence } from 'framer-motion';
+
 import WaitlistsForm from '../../components/forms/waitlists/WaitlistsForm';
 import { coming1, coming2, coming3 } from '../../components/images';
 import {
@@ -44,7 +46,9 @@ const Waitlists = ({ openWaitlistForm, setOpenWaitlistForm }) => {
         </StyledWaitlistsContentWrapper>
       </StyledWaitlistsContainer>
       {openWaitlistForm && (
-        <WaitlistsForm setOpenWaitlistForm={setOpenWaitlistForm} />
+        <AnimatePresence>
+          <WaitlistsForm setOpenWaitlistForm={setOpenWaitlistForm} />
+        </AnimatePresence>
       )}
     </>
   );

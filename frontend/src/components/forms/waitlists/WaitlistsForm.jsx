@@ -8,6 +8,28 @@ import {
   StyledWaitlistForm,
 } from './style/WaitlistsForm';
 
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    y: '50%',
+  },
+  visible: {
+    opacity: 1,
+    y: '-50%',
+    x: '50%',
+    // transition: {
+    //   type: 'tween',
+    //   delay: 0.5,
+    // },
+  },
+  exit: {
+    // x: '-1070vw',
+    y: '2000%',
+    x: '1000%',
+    transition: { type: 'spring', delay: 0.2 },
+  },
+};
+
 const WaitlistsForm = ({ setOpenWaitlistForm }) => {
   const [data, setData] = useState({
     fullname: '',
@@ -26,7 +48,12 @@ const WaitlistsForm = ({ setOpenWaitlistForm }) => {
   return (
     <>
       <Backdrop close={() => setOpenWaitlistForm(false)} />
-      <StyledWaitlistFormContainer>
+      <StyledWaitlistFormContainer
+        variants={containerVariants}
+        initial='hidden'
+        animate='visible'
+        exit='exit'
+      >
         <StyledWaitlistFormWrapper>
           <AppIcons.Close onClick={() => setOpenWaitlistForm(false)} />
           <img src={logo} alt='' />
