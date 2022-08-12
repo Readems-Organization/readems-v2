@@ -5,19 +5,41 @@ import Header from './components/header/Header';
 import { Home, Books, Signin, Waitlists } from './routes';
 
 const App = () => {
-  const [auth, setAuth] = useState(false);
+  const [auth] = useState(false);
+  const [openWaitlistForm, setOpenWaitlistForm] = useState(false);
+
   return (
     <>
       <BrowserRouter>
         <input type='checkbox' id='theme' />
         <div className='App'>
-          <Header />
+          <Header setOpenWaitlistForm={setOpenWaitlistForm} />
 
           <Routes>
-            <Route path='/' element={auth ? <Home /> : <Waitlists />} />
+            <Route
+              path='/'
+              element={
+                auth ? (
+                  <Home />
+                ) : (
+                  <Waitlists
+                    openWaitlistForm={openWaitlistForm}
+                    setOpenWaitlistForm={setOpenWaitlistForm}
+                  />
+                )
+              }
+            />
             <Route path='/books' element={<Books />} />
             <Route path='/users/signin' element={<Signin />} />
-            <Route path='/users/waitlist' element={<Waitlists />} />
+            <Route
+              path='/users/waitlist'
+              element={
+                <Waitlists
+                  openWaitlistForm={openWaitlistForm}
+                  setOpenWaitlistForm={setOpenWaitlistForm}
+                />
+              }
+            />
           </Routes>
         </div>
       </BrowserRouter>

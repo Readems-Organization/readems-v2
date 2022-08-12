@@ -33,7 +33,7 @@ const containerVariants = {
   },
 };
 
-const Header = () => {
+const Header = ({ setOpenWaitlistForm }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -75,6 +75,7 @@ const Header = () => {
           initial={{ y: -550 }}
           animate={{ y: 0 }}
           transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
+          onClick={() => setOpenWaitlistForm(true)}
         >
           Join our waitlists
         </StyledHeaderBtn>
