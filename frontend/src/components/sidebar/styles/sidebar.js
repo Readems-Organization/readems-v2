@@ -1,21 +1,49 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const StyledSidebarWrapper = styled(motion.div)`
-  max-width: 300px;
-  width: 100%;
-  height: 80vh;
-  background: #fff;
-  position: absolute;
+export const StyledSidebarWrapper = styled.div`
+  /* position: absolute;
   top: 0;
   left: 0;
-  overflow-y: scroll;
+  width: 250px;
+  height: 500px;
+  background: #fff; */
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0px 0px 20px #d4d4d4;
+  transition: 03s ease;
+
+  /* overflow-y: scroll; */
+  /* overflow-x: hidden; */
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-  box-shadow: 0px 0px 5px gray;
+  /* box-shadow: 0px 0px 5px gray; */
+  z-index: 1990;
+
+  :hover {
+    width: 250px;
+    overflow-y: scroll;
+  }
 
   ::-webkit-scrollbar {
-    display: none;
+    /* display: none; */
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 10px;
   }
 `;
 
@@ -68,6 +96,10 @@ export const StyledSearchBox = styled.div`
 export const StyledSidebarMenu = styled.ul`
   li {
     padding: 10px 0;
+    :hover {
+      background-color: #d6d6d6;
+      cursor: pointer;
+    }
   }
 
   li h4 {

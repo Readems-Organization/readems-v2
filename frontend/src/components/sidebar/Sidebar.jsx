@@ -23,7 +23,7 @@ const containerVariants = {
     // },
   },
   exit: {
-    x: 1000,
+    x: 1800,
     transition: { type: 'spring', delay: 0.2 },
   },
 };
@@ -49,6 +49,8 @@ const Sidebar = ({ setIsOpen }) => (
           <input type='text' placeholder='Search for writers or publications' />
         </StyledSearchBox>
       </StyledSidebarHeader>
+
+      <label htmlFor='theme'>click</label>
 
       <StyledSidebarMenu>
         <li>
@@ -96,7 +98,7 @@ const Sidebar = ({ setIsOpen }) => (
         </li>
         <li>
           <NavLink to='/' onClick={() => setIsOpen(false)}>
-            Top i sports
+            Top in sports
           </NavLink>
         </li>
         <li>

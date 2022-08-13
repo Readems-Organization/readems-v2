@@ -1,7 +1,7 @@
 const Waitlists = require('../model/waitlist');
 
 const waitlistControllers = {
-  signUp: async (req, rea) => {
+  signUp: async (req, res) => {
     const { fullname, email, message } = req.body;
 
     if (!fullname)
@@ -19,7 +19,7 @@ const waitlistControllers = {
         .status(400)
         .json({ error: 'User with this email already exists.' });
 
-    const newEmail = await new Waitlists({ fullname, email, message });
+    const newEmail = new Waitlists({ fullname, email, message });
 
     await newEmail.save().then(() => {
       res
