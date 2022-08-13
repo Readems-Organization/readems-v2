@@ -5,6 +5,7 @@ export const StyledWaitlistsContainer = styled(motion.div)`
   position: relative;
   height: 90vh;
   padding-top: 30px;
+  /* background: var(--bg-black-900); */
 `;
 
 export const StyledWaitlistImg = styled.img`
@@ -180,6 +181,7 @@ export const StyledWaitlistsContentHeader = styled(motion.h1)`
   z-index: 99;
   font-size: 100px;
   line-height: 140px;
+  color: var(--text-black-900);
 
   @media (max-width: ${({ theme }) => theme.mobile.size1100}) {
     font-size: 90px;

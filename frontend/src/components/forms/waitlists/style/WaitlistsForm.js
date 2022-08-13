@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 export const StyledWaitlistFormContainer = styled(motion.div)`
   max-width: 500px;
   width: 100%;
-  border: 2px solid #fff;
-  background: #fff;
+  border: 2px solid inherit;
+  background: var(--bg-black-900);
   z-index: 5000;
   position: absolute;
   top: 50%;
@@ -48,6 +48,7 @@ export const StyledWaitlistForm = styled.form`
     margin-bottom: 20px;
     padding: 15px 10px;
     border-radius: 10px;
+    background: inherit;
   }
 
   textarea {

@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { FaMoon, FaSun } from 'react-icons/fa';
 import {
   StyledSidebarContainer,
   StyledSidebarBtnWrapper,
   StyledSearchBox,
   StyledListItems,
   StyledSidebarHeader,
+  StyledNightDayWrapper,
 } from './styles/secondSidebar';
 import AppIcon from '../Icons/AppIcon';
-// import { SVG } from '../Icons';
 import { Writers, Readers, Pricing, Explore, Search } from '../Icons';
 
 const containerVariants = {
@@ -30,55 +31,81 @@ const containerVariants = {
   },
 };
 
-const Sidebar = ({ setIsOpen }) => (
-  <StyledSidebarContainer
-    variants={containerVariants}
-    initial='hidden'
-    animate='visible'
-    exit='exit'
-  >
-    <StyledSidebarHeader>
-      <StyledSidebarBtnWrapper>
-        <button type='button' onClick={() => setIsOpen(false)}>
-          <AppIcon.Close />
-        </button>
-      </StyledSidebarBtnWrapper>
+const Sidebar = ({ setIsOpen }) => {
+  const [night, setNight] = useState(true);
 
-      <StyledSearchBox>
-        <Search height='25' width='25' />
-        <input type='text' placeholder='Search for writers or publications' />
-      </StyledSearchBox>
-    </StyledSidebarHeader>
+  const handleNightDay = () => {
+    setNight(!night);
+    document.body.classList.toggle('dark');
+    if (document.body.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  };
 
-    <label htmlFor='theme'>click</label>
+  return (
+    <StyledSidebarContainer
+      variants={containerVariants}
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+    >
+      <StyledSidebarHeader>
+        <StyledSidebarBtnWrapper>
+          <button type='button' onClick={() => setIsOpen(false)}>
+            <AppIcon.Close />
+          </button>
+        </StyledSidebarBtnWrapper>
 
-    <StyledListItems>
-      <li>
-        <NavLink to='/' onClick={() => setIsOpen(false)}>
-          <Explore height='30' width='30' />
-          <span>Explore</span>
-        </NavLink>
+        <StyledSearchBox>
+          <Search height='25' width='25' />
+          <input type='text' placeholder='Search for writers or publications' />
+        </StyledSearchBox>
+      </StyledSidebarHeader>
+
+      <li onClick={handleNightDay}>
+        {night ? (
+          <StyledNightDayWrapper>
+            <FaSun />
+            <span>Light Mode</span>
+          </StyledNightDayWrapper>
+        ) : (
+          <StyledNightDayWrapper>
+            <FaMoon />
+            <span>Night Mode</span>
+          </StyledNightDayWrapper>
+        )}
       </li>
-      <li>
-        <NavLink to='/' onClick={() => setIsOpen(false)}>
-          <Pricing height='30' width='30' />
-          <span>Pricing</span>
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to='/' onClick={() => setIsOpen(false)}>
-          <Writers height='30' width='30' />
-          <span>Writers</span>
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to='/' onClick={() => setIsOpen(false)}>
-          <Readers height='30' width='30' />
-          <span>Readers</span>
-        </NavLink>
-      </li>
-    </StyledListItems>
-  </StyledSidebarContainer>
-);
+
+      <StyledListItems>
+        <li>
+          <NavLink to='/' onClick={() => setIsOpen(false)}>
+            <Explore height='30' width='30' />
+            <span>Explore</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/' onClick={() => setIsOpen(false)}>
+            <Pricing height='30' width='30' />
+            <span>Pricing</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/' onClick={() => setIsOpen(false)}>
+            <Writers height='30' width='30' />
+            <span>Writers</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/' onClick={() => setIsOpen(false)}>
+            <Readers height='30' width='30' />
+            <span>Readers</span>
+          </NavLink>
+        </li>
+      </StyledListItems>
+    </StyledSidebarContainer>
+  );
+};
 
 export default Sidebar;

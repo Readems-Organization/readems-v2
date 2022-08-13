@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Backdrop from '../../Backdrop';
 import { logo } from '../../images';
 import AppIcons from '../../Icons/AppIcon';
+import { useDispatch } from 'react-redux';
+import { registerWaitlistUser } from '../../../redux/actions/waitlistActions';
+
 import {
   StyledWaitlistFormContainer,
   StyledWaitlistFormWrapper,
@@ -31,6 +34,8 @@ const containerVariants = {
 };
 
 const WaitlistsForm = ({ setOpenWaitlistForm }) => {
+  const dispatch = useDispatch();
+
   const [data, setData] = useState({
     fullname: '',
     email: '',
@@ -43,6 +48,7 @@ const WaitlistsForm = ({ setOpenWaitlistForm }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(registerWaitlistUser(data));
     console.log(data);
   };
   return (

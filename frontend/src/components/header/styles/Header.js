@@ -12,7 +12,7 @@ export const StyledHeaderContainer = styled(motion.header)`
   position: sticky;
   top: 0;
   left: 0;
-  background: #fff;
+  background: var(--bg-black-900);
   z-index: 99;
 `;
 
