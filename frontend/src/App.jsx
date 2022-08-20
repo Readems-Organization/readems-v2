@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header';
-import { Home, Books, Signin, Waitlists } from './routes';
+import { Home, Books, Signin, Waitlists, LandingPage } from './routes';
+import { AppContainer } from './components/styles/Global';
 
 const App = () => {
-  const [auth] = useState(false);
+  const [auth] = useState(true);
   const [openWaitlistForm, setOpenWaitlistForm] = useState(false);
 
   const changeColor = () => {
@@ -24,37 +25,14 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <input type='checkbox' id='theme' />
-        <div className='App'>
-          <Header setOpenWaitlistForm={setOpenWaitlistForm} />
-
+        <AppContainer>
           <Routes>
-            <Route
-              path='/'
-              element={
-                auth ? (
-                  <Home />
-                ) : (
-                  <Waitlists
-                    openWaitlistForm={openWaitlistForm}
-                    setOpenWaitlistForm={setOpenWaitlistForm}
-                  />
-                )
-              }
-            />
+            <Route path='/' element={auth ? <LandingPage /> : <Waitlists />} />
             <Route path='/books' element={<Books />} />
             <Route path='/users/signin' element={<Signin />} />
-            <Route
-              path='/users/waitlist'
-              element={
-                <Waitlists
-                  openWaitlistForm={openWaitlistForm}
-                  setOpenWaitlistForm={setOpenWaitlistForm}
-                />
-              }
-            />
+            <Route path='/users/waitlist' element={<Waitlists />} />
           </Routes>
-        </div>
+        </AppContainer>
       </BrowserRouter>
     </>
   );

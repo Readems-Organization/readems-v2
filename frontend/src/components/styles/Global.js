@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -9,8 +9,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root{
-
-
    --bg-black-900: #ffffff;
   --bg-black-100: #353535;
   --bg-black-50: #2b2c2f;
@@ -59,17 +57,6 @@ body {
   }
   } */
 
-   .App {
-    max-width: 2000px;
-    width: 100%;
-    /* border: 2px solid ${({ theme }) => theme.colors.greyishNavy}; */
-    /* background: ${({ theme }) => theme.colors.white}; */
-    /* background-color: var(--bg-black-900) */
-    /* font-family: ${({ theme }) => theme.fontFamily.primary}; */
-
-
-  }
-
   body, h1, h2, h3, h4, h5, h6, p, ol, ul, button, span {
     margin: 0;
     padding: 0;
@@ -117,4 +104,10 @@ body {
     display: none;
   }
 
+`;
+
+export const AppContainer = styled.div`
+  max-width: 2000px;
+  width: 100%;
+  border: 2px solid ${({ theme }) => theme.colors.greyishNavy};
 `;

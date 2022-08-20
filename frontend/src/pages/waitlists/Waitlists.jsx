@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import WaitlistsForm from '../../components/forms/waitlists/WaitlistsForm';
 import { coming1, coming2, coming3 } from '../../components/images';
@@ -10,10 +10,15 @@ import {
   StyledWaitlistsContentWrapper,
   StyledWaitlistBtn,
 } from './style/Waitlists';
+import Header from '../../components/header/Header';
 
-const Waitlists = ({ openWaitlistForm, setOpenWaitlistForm }) => {
+const Waitlists = () => {
+  const [openWaitlistForm, setOpenWaitlistForm] = useState(false);
+
   return (
     <>
+      <Header setOpenWaitlistForm={setOpenWaitlistForm} />
+
       <StyledWaitlistsContainer>
         <StyledWaitlistImg first src={coming3} alt='waitlist-pic' />
         <StyledWaitlistImg second src={coming2} alt='waitlist-pic' />
