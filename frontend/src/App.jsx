@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from './components/header/Header';
+import Header from './components/header/mainHeader/Header';
 import { Home, Books, Signin, Waitlists, LandingPage } from './routes';
 import { AppContainer } from './components/styles/Global';
 
@@ -26,6 +26,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <AppContainer>
+          <Header />
           <Routes>
             <Route path='/' element={auth ? <LandingPage /> : <Waitlists />} />
             <Route path='/books' element={<Books />} />

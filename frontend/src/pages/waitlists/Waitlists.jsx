@@ -10,14 +10,14 @@ import {
   StyledWaitlistsContentWrapper,
   StyledWaitlistBtn,
 } from './style/Waitlists';
-import Header from '../../components/header/Header';
+import { WaitlistHeader } from '../../components/header/waitlistHeader/WaitlistHeader';
 
 const Waitlists = () => {
   const [openWaitlistForm, setOpenWaitlistForm] = useState(false);
 
   return (
     <>
-      <Header setOpenWaitlistForm={setOpenWaitlistForm} />
+      <WaitlistHeader setOpenWaitlistForm={setOpenWaitlistForm} />
 
       <StyledWaitlistsContainer>
         <StyledWaitlistImg first src={coming3} alt='waitlist-pic' />

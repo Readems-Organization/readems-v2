@@ -10,9 +10,9 @@ import {
   StyledHeaderLeftWrapper,
 } from './styles/Header';
 // import Sidebar from '../sidebar/Sidebar';
-import AppIcon from '../Icons/AppIcon';
-import { logo, logo2 } from '../images';
-import Sidebar from '../sidebar/SidebarSecond';
+import AppIcon from '../../Icons/AppIcon';
+import { logo, logo2 } from '../../images';
+import Sidebar from '../../sidebar/SidebarSecond';
 
 const containerVariants = {
   hidden: {
@@ -33,7 +33,7 @@ const containerVariants = {
   },
 };
 
-const Header = ({ setOpenWaitlistForm }) => {
+export const WaitlistHeader = ({ setOpenWaitlistForm }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -86,5 +86,3 @@ const Header = ({ setOpenWaitlistForm }) => {
     </>
   );
 };
-
-export default Header;

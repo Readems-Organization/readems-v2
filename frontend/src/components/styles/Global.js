@@ -107,7 +107,8 @@ body {
 `;
 
 export const AppContainer = styled.div`
-  max-width: 2000px;
+  max-width: 1500px;
   width: 100%;
+  margin: 0 auto;
   border: 2px solid ${({ theme }) => theme.colors.greyishNavy};
 `;
