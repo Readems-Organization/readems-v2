@@ -6,8 +6,9 @@ import {
   StyledLogoMenu,
   StyledHeaderNav,
   StyledButtonWrapper,
-  StyledButton,
 } from './styles/Header';
+
+import { Button } from '../../buttons/Button';
 
 const Header = () => {
   return (
@@ -27,8 +28,8 @@ const Header = () => {
       </StyledHeaderNav>
 
       <StyledButtonWrapper>
-        <StyledButton secondary>Login</StyledButton>
-        <StyledButton>Sign up for free</StyledButton>
+        <Button secondary>Login</Button>
+        <Button>Sign up for free</Button>
       </StyledButtonWrapper>
       <StyledLogoMenu src='/svgs/menu.svg' alt='' />
     </StyledHeaderContainer>

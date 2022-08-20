@@ -111,4 +111,5 @@ export const AppContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   border: 2px solid ${({ theme }) => theme.colors.greyishNavy};
+  padding: 0 30px;
 `;

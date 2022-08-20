@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledHeaderContainer = styled(motion.header)`
-  max-width: 1339px;
+  /* max-width: 1339px; */
   width: 100%;
   height: 85px;
   /* border: 2px solid red; */
