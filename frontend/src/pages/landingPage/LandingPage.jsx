@@ -10,7 +10,7 @@ const LandingPage = () => {
       <HeroSection />
       <CardModule />
       <PopularReads />
-      // <Discover />
+      {/** <Discover />*/}
     </div>
   );
 };
