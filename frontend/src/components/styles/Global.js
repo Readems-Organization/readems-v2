@@ -1,10 +1,15 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500;600;800&family=Lato:wght@100;300;400;700;900&display=swap'); */
+
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box ;
+    font-family: 'Lato', sans-serif;
 
   }
 
@@ -61,7 +66,7 @@ body {
     margin: 0;
     padding: 0;
     /* font-family: ${({ theme }) => theme.fontFamily.primary}; */
-    font-family: 'Lato', sans-serif;
+    /* font-family: 'Lato', sans-serif; */
      /* color: var(--text-black-900); */
 
   }

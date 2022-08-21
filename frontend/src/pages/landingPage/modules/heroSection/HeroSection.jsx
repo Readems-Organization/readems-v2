@@ -25,7 +25,7 @@ const HeroSection = () => {
           </StyledButtonWrapper>
         </StyledHeroSectionLeft>
         <StyledHeroSectionRight>
-          <img src='/svgs/Group-pics.svg' alt='' />
+          <img src='/svgs/Group-pics.png' alt='' />
         </StyledHeroSectionRight>
       </StyledHeroSection>
       <StyledDescription>
