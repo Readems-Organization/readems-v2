@@ -1,16 +1,19 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500;600;800&family=Lato:wght@100;300;400;700;900&display=swap'); */
+
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box ;
+    font-family: 'Lato', sans-serif;
 
   }
 
   :root{
-
-
    --bg-black-900: #ffffff;
   --bg-black-100: #353535;
   --bg-black-50: #2b2c2f;
@@ -59,22 +62,11 @@ body {
   }
   } */
 
-   .App {
-    max-width: 2000px;
-    width: 100%;
-    /* border: 2px solid ${({ theme }) => theme.colors.greyishNavy}; */
-    /* background: ${({ theme }) => theme.colors.white}; */
-    /* background-color: var(--bg-black-900) */
-    /* font-family: ${({ theme }) => theme.fontFamily.primary}; */
-
-
-  }
-
   body, h1, h2, h3, h4, h5, h6, p, ol, ul, button, span {
     margin: 0;
     padding: 0;
     /* font-family: ${({ theme }) => theme.fontFamily.primary}; */
-    font-family: 'Lato', sans-serif;
+    /* font-family: 'Lato', sans-serif; */
      /* color: var(--text-black-900); */
 
   }
@@ -117,4 +109,12 @@ body {
     display: none;
   }
 
+`;
+
+export const AppContainer = styled.div`
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  /* border: 2px solid ${({ theme }) => theme.colors.greyishNavy}; */
+  padding: 0 30px;
 `;
