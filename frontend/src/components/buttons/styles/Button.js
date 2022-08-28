@@ -9,7 +9,7 @@ export const StyledButton = styled(motion.button)`
   justify-content: center;
   padding: 12px 20px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   background-color: #0042ff;
