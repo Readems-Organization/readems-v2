@@ -9,6 +9,7 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "env-cmd": "^10.1.0",
     "framer-motion": "^4.1.17",
     "moment": "^2.29.4",
     "react": "^18.2.0",
@@ -48,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^2.0.6"
   }
 }

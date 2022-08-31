@@ -1,2 +1,6 @@
 node_modules
 /node_modules
+# /backend/config/mainDev.js
+# /dev.js
+development.js
+dev.js

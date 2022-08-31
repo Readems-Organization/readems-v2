@@ -1,8 +1,12 @@
 {
-  "name": "readems-v4",
+  "name": "readems",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "TThe Readems is an online community that gives access to creators to publish, create, share, promote and monetize their work.",
+  "main": "server.js",
+  "engine": {
+    "node": "16.13.1",
+    "npm": "8.1.2"
+  },
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
