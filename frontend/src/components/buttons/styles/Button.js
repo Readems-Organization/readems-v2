@@ -14,6 +14,9 @@ export const StyledButton = styled(motion.button)`
   line-height: 24px;
   background-color: #0042ff;
   color: #fff;
+  :hover{
+    opacity: 0.7;
+  }
 
    ${(props) =>
      props.primary &&
