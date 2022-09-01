@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "TThe Readems is an online community that gives access to creators to publish, create, share, promote and monetize their work.",
   "main": "server.js",
-  "engine": {
+  "engines": {
     "node": "16.13.1",
     "npm": "8.1.2"
   },

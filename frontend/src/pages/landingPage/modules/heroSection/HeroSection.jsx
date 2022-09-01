@@ -21,7 +21,7 @@ const HeroSection = () => {
           </p>
           <StyledButtonWrapper>
             <Button primary>Start reading</Button>
-            <Button primary>Start earning</Button>
+            <Button primary>Start writing</Button>
           </StyledButtonWrapper>
         </StyledHeroSectionLeft>
         <StyledHeroSectionRight>

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/header/mainHeader/Header';
-import { Home, Books, Signin, Waitlists, LandingPage } from './routes';
+import { Books, Signin, Waitlists, LandingPage } from './routes';
 import { AppContainer } from './components/styles/Global';
 
 const App = () => {
   const [auth] = useState(true);
-  const [openWaitlistForm, setOpenWaitlistForm] = useState(false);
+  // const [openWaitlistForm, setOpenWaitlistForm] = useState(false);
 
   const changeColor = () => {
     if (localStorage.getItem('theme') !== null) {

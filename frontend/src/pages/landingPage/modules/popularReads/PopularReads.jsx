@@ -12,7 +12,7 @@ export const PopularReads = () => {
       <StyledPopularReadsCardWrapper>
         <PopularReadCard
           title='Writer queen'
-          pic={<img src='/svgs/img-4.png' alt='Book-picture' />}
+          pic={<img src='/svgs/img-4.png' alt='' />}
           header='Things suck with consistence practice'
           description='The practice roadmap for techies in 21st century'
           time='5 min Read'
@@ -20,7 +20,7 @@ export const PopularReads = () => {
         />
         <PopularReadCard
           title='Writer queen'
-          pic={<img src='/svgs/img-5.png' alt='Book-picture' />}
+          pic={<img src='/svgs/img-5.png' alt='' />}
           header='How to be bad ass developer in two month'
           description='The practice roadmap for techies in 21st century'
           time='5 min Read'
@@ -28,7 +28,7 @@ export const PopularReads = () => {
         />
         <PopularReadCard
           title='Writer queen'
-          pic={<img src='/svgs/img-6.png' alt='Book-picture' />}
+          pic={<img src='/svgs/img-6.png' alt='' />}
           header='Using double diamond method in UX process'
           description='The practice roadmap for techies in 21st century'
           time='5 min Read'
@@ -36,7 +36,7 @@ export const PopularReads = () => {
         />
         <PopularReadCard
           title='Writer queen'
-          pic={<img src='/svgs/img-7.png' alt='Book-picture' />}
+          pic={<img src='/svgs/img-7.png' alt='' />}
           header='How to develop a good reading habit'
           description='The practice roadmap for techies in 21st century'
           time='5 min Read'
@@ -44,7 +44,7 @@ export const PopularReads = () => {
         />
         <PopularReadCard
           title='Writer queen'
-          pic={<img src='/svgs/img-8.png' alt='Book-picture' />}
+          pic={<img src='/svgs/img-8.png' alt='' />}
           header='How to be bad ass developer in two month '
           description='The practice roadmap for techies in 21st century'
           time='5 min Read'
@@ -52,7 +52,7 @@ export const PopularReads = () => {
         />
         <PopularReadCard
           title='Writer queen'
-          pic={<img src='/svgs/img-9.png' alt='Book-picture' />}
+          pic={<img src='/svgs/img-9.png' alt='' />}
           header='web3 and the metaverse'
           description='The practice roadmap for techies in 21st century'
           time='5 min Read'
