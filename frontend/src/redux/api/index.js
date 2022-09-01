@@ -13,4 +13,4 @@ API.interceptors.request.use((req) => {
 });
 
 export const waitlistsRegister = (waitlistsData) =>
-  API.post('/users/waitlists', waitlistsData);
+  API.post('/api/users/waitlists', waitlistsData);
