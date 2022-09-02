@@ -13,7 +13,8 @@ export const StyledDiscoverContainer = styled(motion.div)`
     font-weight: 700;
     font-size: 48px;
     line-height: 58px;
-    color: #0c0b11;
+    /* color: #0c0b11; */
+    /* color: var(--text-black-900); */
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size900}) {
@@ -51,6 +52,7 @@ export const StyledDiscoverContent = styled(motion.div)`
     width: 380px;
     font-size: 25px;
     font-weight: 700;
-    color: #fff;
+    /* color: #fff; */
+    color: var(--text-black-900);
   }
 `;

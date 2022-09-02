@@ -35,6 +35,7 @@ export const StyledLogo = styled(motion.img)`
 
 export const StyledLogoMenu = styled(motion.img)`
   display: none;
+  cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
     width: initial;

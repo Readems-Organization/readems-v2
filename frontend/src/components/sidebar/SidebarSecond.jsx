@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import {
@@ -20,22 +20,23 @@ const containerVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    // transition: {
-    //   type: 'tween',
-    //   delay: 0.5,
-    // },
+    transition: {
+      type: 'spring',
+    },
   },
   exit: {
-    y: 1800,
-    transition: { type: 'spring', delay: 0.2 },
+    x: '-100vw',
+    transition: { type: 'spring' },
   },
 };
 
 const Sidebar = ({ setIsOpen }) => {
-  const [night, setNight] = useState(true);
+  const [night, setNight] = useState(false);
 
   const handleNightDay = () => {
     setNight(!night);
+    setIsOpen(false);
+
     document.body.classList.toggle('dark');
     if (document.body.classList.contains('dark')) {
       localStorage.setItem('theme', 'dark');
@@ -43,6 +44,14 @@ const Sidebar = ({ setIsOpen }) => {
       localStorage.setItem('theme', 'light');
     }
   };
+
+  useEffect(() => {
+    if (localStorage.getItem('theme') === 'light') {
+      setNight(true);
+    } else {
+      setNight(false);
+    }
+  }, []);
 
   return (
     <StyledSidebarContainer
@@ -64,8 +73,8 @@ const Sidebar = ({ setIsOpen }) => {
         </StyledSearchBox>
       </StyledSidebarHeader>
 
-      <li onClick={handleNightDay}>
-        {night ? (
+      <li onClick={handleNightDay} style={{ cursor: 'pointer' }}>
+        {!night ? (
           <StyledNightDayWrapper>
             <FaSun />
             <span>Light Mode</span>

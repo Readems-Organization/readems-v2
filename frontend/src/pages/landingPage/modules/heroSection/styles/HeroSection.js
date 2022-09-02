@@ -18,19 +18,23 @@ export const StyledHeroSectionLeft = styled(motion.div)`
   width: 670px;
   /* border: 2px solid red; */
   h2 {
-    color: #1d1a27;
+    /* color: #1d1a27; */
+    color: var(--text-black-900);
     font-size: 69px;
     font-weight: 700;
     line-height: 83px;
     margin-bottom: 10px;
+    /* opacity: 0.9; */
   }
 
   p {
-    color: #1d1a27;
+    /* color: #1d1a27; */
+    color: var(--text-black-900);
     font-size: 40px;
     font-weight: 400;
     line-height: 48px;
     margin-bottom: 20px;
+    /* opacity: 0.9; */
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
