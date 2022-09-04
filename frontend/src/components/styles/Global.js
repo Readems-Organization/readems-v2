@@ -25,6 +25,8 @@ export const GlobalStyle = createGlobalStyle`
   --outer-shadow-0: 0 0 0 #222327, 0 0 0 #363636;
   --inner-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
   --inner-shadow-0: inset 0px 0px 0px #222327, inset 0px 0px 0px #363636;
+  --text-gray-0: #c6c6c7;
+  --text-black-0: #191722;
 }
 
 
@@ -42,6 +44,8 @@ export const GlobalStyle = createGlobalStyle`
   --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
   --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
   --inner-shadow-0: inset 0px 0px 0px #d0d0d0, inset 0px 0px 0px #f8f8f8;
+   --text-gray-0: #c6c6c7;
+    --text-black-0: #d9d9d9;
 
 }
 

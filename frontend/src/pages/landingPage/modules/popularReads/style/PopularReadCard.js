@@ -14,7 +14,8 @@ export const StyledReadCardContainer = styled(motion.div)`
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
-    color: #000;
+    /* color: #000; */
+    color: var(--text-black-900);
     text-transform: capitalize;
   }
 
@@ -23,7 +24,8 @@ export const StyledReadCardContainer = styled(motion.div)`
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #c6c6c7;
+    /* color: #c6c6c7; */
+    color: var(--text-gray-0);
     margin-top: 5px;
   }
 `;
@@ -45,7 +47,8 @@ export const StyledCardTitle = styled.div`
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
-    color: #191722;
+    /* color: #191722; */
+    color: var(--text-black-0);
     text-transform: capitalize;
   }
 `;
@@ -84,14 +87,14 @@ export const StyledCardInfo = styled.div`
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #000;
+    color: var(--text-black-900);
   }
 
   > span {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #000;
+    color: var(--text-black-900);
   }
 
   button {
