@@ -18,6 +18,6 @@ ReactDOM.render(
   </ThemeProvider>,
 
   document.getElementById('root'),
-  { Translate },
+
   // document.getElementById('google_element'),
 );
