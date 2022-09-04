@@ -7,7 +7,7 @@ import App from './App';
 import { GlobalStyle } from './components/styles/Global';
 import theme from './components/themes';
 import { store } from './redux/store';
-import { Translate } from './Translate';
+// import { Translate } from './Translate';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
