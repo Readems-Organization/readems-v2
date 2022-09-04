@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/header/mainHeader/Header';
 import { Books, Signin, Waitlists, LandingPage } from './routes';
 import { AppContainer } from './components/styles/Global';
+import axios from 'axios';
+import { translate } from './redux/api';
 
 const App = () => {
   const [auth] = useState(true);
@@ -21,6 +23,12 @@ const App = () => {
   useEffect(() => {
     changeColor();
   }, []);
+
+  // useEffect(() => {
+  //   translate;
+
+  //   console.log('This is res data ', translate);
+  // });
 
   return (
     <>
