@@ -33,6 +33,16 @@ export const StyledButton = styled(motion.button)`
       color: #0042ff;
     `}
 
+    ${(props) =>
+      props.library &&
+      css`
+        width: 252px;
+        height: 69px;
+        border: 1px solid #e4e5ff;
+      `}
+
+
+
    @media (max-width: ${({ theme }) => theme.mobile.size900}) {
     width: 150px;
     height: 38px;
@@ -49,6 +59,13 @@ export const StyledButton = styled(motion.button)`
         display: flex;
         height: 50px;
       `}
+
+      ${(props) =>
+        props.library &&
+        css`
+          display: flex;
+        `}
+
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size375}) {
@@ -62,5 +79,12 @@ export const StyledButton = styled(motion.button)`
         display: flex;
         padding: 12px 10px;
       `}
+
+        ${(props) =>
+          props.library &&
+          css`
+            display: flex;
+          `}
+
   }
 `;
