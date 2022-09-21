@@ -2,8 +2,11 @@
 import {
   RiArrowDropDownFill,
   RiCloseFill,
+  RiEyeLine,
+  RiEyeOffLine,
   RiMenuFill,
   RiSearchLine,
+  RiUserFill,
 } from 'react-icons/ri';
 
 export default {
@@ -11,4 +14,7 @@ export default {
   Close: RiCloseFill,
   Search: RiSearchLine,
   DropDown: RiArrowDropDownFill,
+  Eye: RiEyeLine,
+  EyeClose: RiEyeOffLine,
+  User: RiUserFill,
 };

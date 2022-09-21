@@ -7,6 +7,7 @@ export const StyledSubscribeContainer = styled(motion.div)`
   justify-content: center;
   align-items: center;
   margin: 50px auto;
+  margin-top: 80px;
   h2 {
     text-align: center;
     font-size: 33px;

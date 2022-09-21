@@ -6,7 +6,7 @@ export const StyledDiscoverContainer = styled(motion.div)`
   margin: auto;
   margin-top: 30px;
   margin-bottom: 50px;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   border-radius: 5px;
 
   h2 {
@@ -39,15 +39,16 @@ export const StyledDiscoverContent = styled(motion.div)`
   /* background-position: center; */
   padding: 0 30px;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 
   div {
     margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 50px;
   }
-
-  border: 2px solid red;
 
   h4 {
     width: 380px;

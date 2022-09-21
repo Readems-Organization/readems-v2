@@ -21,7 +21,7 @@ const HeroSection = () => {
           </p>
           <StyledButtonWrapper>
             <Button primary>Start reading</Button>
-            <Button primary>Start writing</Button>
+            <Button secondary>Start writing</Button>
           </StyledButtonWrapper>
         </StyledHeroSectionLeft>
         <StyledHeroSectionRight>
@@ -32,7 +32,7 @@ const HeroSection = () => {
         We are building a community where readers and writers can create and
         read valuable content. With Readems reading is fun and writing is
         profitable.
-        <span>Let's your story...</span>
+        <span>Let's hear your story...</span>
       </StyledDescription>
     </StyledHeroSectionContainer>
   );

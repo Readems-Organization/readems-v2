@@ -24,6 +24,7 @@ export const StyledHeroSectionLeft = styled(motion.div)`
     font-weight: 700;
     line-height: 83px;
     margin-bottom: 10px;
+    text-align: center;
     /* opacity: 0.9; */
   }
 
@@ -34,6 +35,7 @@ export const StyledHeroSectionLeft = styled(motion.div)`
     font-weight: 400;
     line-height: 48px;
     margin-bottom: 20px;
+    text-align: center;
     /* opacity: 0.9; */
   }
 
@@ -97,6 +99,7 @@ export const StyledButtonWrapper = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
     justify-content: center;
+    display: flex;
   }
 `;
 

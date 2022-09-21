@@ -30,17 +30,29 @@ const App = () => {
   //   console.log('This is res data ', translate);
   // });
 
+  const user = false;
+
   return (
     <>
       <BrowserRouter>
         <AppContainer>
-          <Header />
-          <Routes>
-            <Route path='/' element={auth ? <LandingPage /> : <Waitlists />} />
-            <Route path='/books' element={<Books />} />
-            <Route path='/users/signin' element={<Signin />} />
-            <Route path='/users/waitlist' element={<Waitlists />} />
-          </Routes>
+          {user ? (
+            <div>
+              <Header />
+              <Routes>
+                <Route path='/books' element={<Books />} />
+              </Routes>
+            </div>
+          ) : (
+            <Routes>
+              <Route path='/users/signin' element={<Signin />} />
+              <Route
+                path='/'
+                element={auth ? <LandingPage /> : <Waitlists />}
+              />
+              <Route path='/users/waitlist' element={<Waitlists />} />
+            </Routes>
+          )}
         </AppContainer>
       </BrowserRouter>
     </>
