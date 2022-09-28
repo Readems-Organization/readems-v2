@@ -16,11 +16,12 @@ export const StyledHeroSection = styled(motion.div)`
 
 export const StyledHeroSectionLeft = styled(motion.div)`
   width: 670px;
+
   h2 {
     color: var(--text-black-900);
-    font-size: 69px;
+    font-size: 6.9rem;
     font-weight: 700;
-    line-height: 83px;
+    line-height: 8.3rem;
     margin-bottom: 10px;
     text-align: center;
   }
@@ -28,12 +29,11 @@ export const StyledHeroSectionLeft = styled(motion.div)`
   p {
     /* color: #1d1a27; */
     color: var(--text-black-900);
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 400;
-    line-height: 48px;
+    line-height: 4.8rem;
     margin-bottom: 20px;
     text-align: center;
-    /* opacity: 0.9; */
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
@@ -42,52 +42,18 @@ export const StyledHeroSectionLeft = styled(motion.div)`
     width: 100%;
     margin: 0 auto;
     margin-top: 30px;
-
-    h2 {
-      font-size: 52px;
-      line-height: 53px;
-    }
-
-    p {
-      font-size: 30px;
-      line-height: 35px;
-    }
-  }
-
-  @media (max-width: ${({ theme }) => theme.mobile.size420}) {
-    h2 {
-      font-size: 40px;
-      line-height: 38px;
-    }
-
-    p {
-      font-size: 20px;
-      line-height: 25px;
-    }
-  }
-
-  @media (max-width: ${({ theme }) => theme.mobile.size375}) {
-    h2 {
-      font-size: 35px;
-      line-height: 33px;
-    }
-
-    p {
-      font-size: 20px;
-      line-height: 25px;
-    }
   }
 `;
 export const StyledHeroSectionRight = styled(motion.div)`
   img {
-    /* width: 320px; */
+    width: 100%;
+    vertical-align: middle;
   }
 `;
 
 export const StyledButtonWrapper = styled.div`
   display: flex;
   align-items: center;
-
   margin: auto;
   gap: 40px;
   margin-top: 50px;
@@ -105,8 +71,8 @@ export const StyledDescription = styled.p`
   margin: auto;
   margin-top: 80px;
   font-weight: 400;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 4rem;
+  line-height: 4.8rem;
   text-align: center;
 
   span {
@@ -114,14 +80,10 @@ export const StyledDescription = styled.p`
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
-    font-size: 30px;
-    line-height: 38px;
     margin-top: 40px;
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size420}) {
-    font-size: 22px;
-    line-height: 30px;
     font-weight: 500;
     margin-top: 20px;
   }

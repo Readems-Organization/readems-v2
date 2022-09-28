@@ -1,6 +1,7 @@
 import React from 'react';
 import { CardModule } from './modules/cardModule/CardModule';
 import { Discover } from './modules/discoverModules/Discover';
+import { Footer } from './modules/footer/Footer';
 import HeroSection from './modules/heroSection/HeroSection';
 import { PopularReads } from './modules/popularReads/PopularReads';
 import { Subscribe } from './modules/subscribeModule/Subscribe';
@@ -13,6 +14,7 @@ const LandingPage = () => {
       <PopularReads />
       <Discover />
       <Subscribe />
+      <Footer />
     </div>
   );
 };

@@ -10,9 +10,9 @@ export const StyledSubscribeContainer = styled(motion.div)`
   margin-top: 80px;
   h2 {
     text-align: center;
-    font-size: 33px;
+    font-size: 3.3rem;
     font-weight: 500;
-    line-height: 48px;
+    line-height: 4.8rem;
     color: var(--text-black-900);
   }
 
@@ -24,18 +24,17 @@ export const StyledSubscribeContainer = styled(motion.div)`
       border: 2px solid #c6c6c7;
       height: 68px;
       max-width: 900px;
-      /* width: 799px; */
       width: 100%;
       padding: 19px 27px;
       border-radius: 5px;
-      font-size: 32px;
+      font-size: 3.2rem;
       font-weight: 500;
-      line-height: 38px;
+      line-height: 3.8rem;
       color: #c6c6c7;
       ::placeholder {
-        font-size: 32px;
+        font-size: 2.2rem;
         font-weight: 500;
-        line-height: 38px;
+        line-height: 3.8rem;
         color: #c6c6c7;
       }
     }
@@ -56,5 +55,25 @@ export const StyledSubscribeContainer = styled(motion.div)`
         width: 100%;
       }
     }
+  }
+`;
+
+export const StyledJoinReademsContainer = styled(motion.div)`
+  margin: 40px 0;
+  margin-bottom: 50px;
+  h2 {
+    margin-bottom: 20px;
+    font-size: 6.4rem;
+    line-height: 7.7rem;
+  }
+  button {
+    margin: 0 auto;
+  }
+`;
+
+export const StyledNewsLetterContainer = styled(motion.div)`
+  margin-top: 100px;
+  h2 {
+    margin-bottom: 20px;
   }
 `;

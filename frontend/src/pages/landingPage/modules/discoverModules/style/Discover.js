@@ -10,21 +10,14 @@ export const StyledDiscoverContainer = styled(motion.div)`
 
   h2 {
     font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
-    /* color: #0c0b11; */
+    font-size: 4.8rem;
+    line-height: 5.8rem;
     color: var(--text-black-900);
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size900}) {
     h2 {
       text-align: center;
-    }
-  }
-
-  @media (max-width: ${({ theme }) => theme.mobile.size420}) {
-    h2 {
-      font-size: 38px;
     }
   }
 `;
@@ -50,20 +43,19 @@ export const StyledDiscoverContent = styled(motion.div)`
 
   h4 {
     width: 380px;
-    font-size: 26px;
+    font-size: 2.6rem;
     font-weight: 700;
     color: #fff;
-    /* color: var(--text-black-900); */
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size420}) {
+    height: 200px;
     div {
       flex-direction: column;
     }
 
     h4 {
       width: 100%;
-      font-size: 26px;
       text-align: center;
       margin-bottom: 20px;
     }
@@ -100,7 +92,7 @@ export const StyledDiscoverWriterContent = styled(motion.div)`
   text-align: center;
   p {
     width: 450px;
-    font-size: 25px;
+    font-size: 2.5rem;
     margin: 30px 0;
   }
   button {
@@ -113,13 +105,13 @@ export const StyledDiscoverWriterContent = styled(motion.div)`
     }
 
     h2 {
-      font-size: 30px;
+      font-size: 3rem;
       line-height: normal;
     }
 
     p {
-      width: 350px;
-      font-size: 20px;
+      /* width: 350px; */
+      /* font-size: 20px; */
       margin: 20px 0;
     }
 
@@ -131,13 +123,13 @@ export const StyledDiscoverWriterContent = styled(motion.div)`
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
     width: 100%;
-  }
 
-  @media (max-width: ${({ theme }) => theme.mobile.size375}) {
+    h2 {
+      margin-top: 20px;
+    }
+
     p {
       width: 100%;
-      font-size: 20px;
-      margin: 20px 0;
     }
   }
 `;
