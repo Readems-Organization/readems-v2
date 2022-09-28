@@ -1,0 +1,60 @@
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  overflow: hidden;
+  border: 2px solid red;
+}
+
+.google {
+  border: 5px solid yellow;
+  width: 200px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.goog-te-gadget img {
+  vertical-align: middle;
+  display: none;
+  width: 30px !important;
+}
+
+img {
+  width: 30px !important;
+}
+
+/* #google_translate_element {
+  position: absolute;
+  right: 0;
+  top: 0;
+} */
+
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-simple img {
+  display: none !important;
+}
+
+.goog-tooltip {
+  display: none !important;
+}
+
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+body {
+  top: 0 !important;
+}

@@ -8,10 +8,6 @@
     <meta name="description" content=" Read, Write and Earn." />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/Logo-2.png" />
 
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,36 +16,34 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;500;600;800&family=Lato:wght@100;300;400;700;900&display=swap"
       rel="stylesheet"
     />
-    <!--
 
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>Readems</title>
+    <link rel="stylesheet" href="index.css" />
     <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <!-- <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
   </head>
   <body>
+    <div id="google_element" class="google"></div>
+    <!-- <div id="google_translate_element" class="google"></div> -->
     <div id="root"></div>
-    <div id="google_element"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <script>
+      function loadGoogleTranslate() {
+        new google.translate.TranslateElement('google_element');
+      }
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      // function googleTranslateElementInit() {
+      //   new google.translate.TranslateElement(
+      //     {
+      //       defaultLanguage: 'en',
+      //       pageLanguage: 'en',
+      //       layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      //       // autoDisplay: false,
+      //       // multilanguagePage: true,
+      //     },
+      //     'google_translate_element',
+      //   );
+      // }
+    </script>
   </body>
-  <!-- <script>
-    function loadGoogleTranslate() {
-      new google.translate.TranslateElement('google_element');
-    }
-  </script> -->
 </html>

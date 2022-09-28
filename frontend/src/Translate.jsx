@@ -20,3 +20,31 @@
 //     }
 //   ]
 // }
+
+import React, { useEffect } from 'react';
+import axios from 'axios';
+
+const Translate = () => {
+  useEffect(() => {
+    async function googleTranslateElementInit() {
+      const google = await axios.get(
+        'http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit',
+      );
+      new google.translate.TranslateElement(
+        {
+          defaultLanguage: 'en',
+          pageLanguage: 'en',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false,
+          multilanguagePage: true,
+        },
+        'google_translate_element',
+      );
+    }
+
+    googleTranslateElementInit();
+  });
+  return <div id='google_translate_element'></div>;
+};
+
+export default Translate;

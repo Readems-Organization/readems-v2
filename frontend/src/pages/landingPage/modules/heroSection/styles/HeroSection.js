@@ -16,16 +16,13 @@ export const StyledHeroSection = styled(motion.div)`
 
 export const StyledHeroSectionLeft = styled(motion.div)`
   width: 670px;
-  /* border: 2px solid red; */
   h2 {
-    /* color: #1d1a27; */
     color: var(--text-black-900);
     font-size: 69px;
     font-weight: 700;
     line-height: 83px;
     margin-bottom: 10px;
     text-align: center;
-    /* opacity: 0.9; */
   }
 
   p {
@@ -45,7 +42,6 @@ export const StyledHeroSectionLeft = styled(motion.div)`
     width: 100%;
     margin: 0 auto;
     margin-top: 30px;
-    /* border: 2px solid green; */
 
     h2 {
       font-size: 52px;

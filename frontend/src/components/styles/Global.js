@@ -121,4 +121,32 @@ export const AppContainer = styled.div`
   margin: 0 auto;
   /* border: 2px solid ${({ theme }) => theme.colors.greyishNavy}; */
   padding: 0 30px;
+  overflow: hidden;
+
+
+  .google {
+  border: 5px solid yellow;
+  width: 200px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-simple img {
+  display: none !important;
+}
+
+.goog-tooltip {
+  display: none !important;
+}
+
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
 `;

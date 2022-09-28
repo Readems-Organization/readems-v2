@@ -7,3 +7,4 @@ export const Waitlists = loadable(() => import('../pages/waitlists/Waitlists'));
 export const LandingPage = loadable(() =>
   import('../pages/landingPage/LandingPage'),
 );
+export const SignUp = loadable(() => import('../components/signUp/SignUp'));

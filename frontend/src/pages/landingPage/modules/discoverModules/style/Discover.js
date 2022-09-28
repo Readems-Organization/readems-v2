@@ -6,7 +6,6 @@ export const StyledDiscoverContainer = styled(motion.div)`
   margin: auto;
   margin-top: 30px;
   margin-bottom: 50px;
-  /* border: 2px solid green; */
   border-radius: 5px;
 
   h2 {
@@ -14,7 +13,7 @@ export const StyledDiscoverContainer = styled(motion.div)`
     font-size: 48px;
     line-height: 58px;
     /* color: #0c0b11; */
-    /* color: var(--text-black-900); */
+    color: var(--text-black-900);
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size900}) {
@@ -36,7 +35,6 @@ export const StyledDiscoverContent = styled(motion.div)`
   background-image: url('/svgs/background-img.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-position: center; */
   padding: 0 30px;
   margin-top: 30px;
   display: flex;
