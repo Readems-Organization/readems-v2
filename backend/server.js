@@ -13,6 +13,7 @@ app.use(cors());
 connectDB();
 
 app.use('/api/users', require('./routes/waitlistsRoutes'));
+app.use('/api/subscribes', require('./routes/subscribesRoutes'));
 
 __dirname = path.resolve();
 if (process.env.NODE_ENV === 'production') {

@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const StyledHeroSectionContainer = styled(motion.div)``;
+export const StyledHeroSectionContainer = styled(motion.div)`
+  margin-top: 150px;
+`;
 
 export const StyledHeroSection = styled(motion.div)`
   display: flex;

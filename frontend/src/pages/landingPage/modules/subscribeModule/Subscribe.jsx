@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import * as Style from './style/Subscribe';
+import { registerSubscribesEmail } from '../../../../redux/actions/subscribesActions';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 export const JoinReadems = () => {
   const { ref, inView } = useInView({
@@ -41,6 +44,8 @@ export const JoinReadems = () => {
 };
 
 export const NewsLetters = () => {
+  const [emailData, setEmailData] = useState({ email: '' });
+  const dispatch = useDispatch();
   const { ref, inView } = useInView({
     threshold: 1,
   });
@@ -64,13 +69,34 @@ export const NewsLetters = () => {
       });
     }
   }, [inView]);
+
+  const handleChangeInput = (e) => {
+    setEmailData({ ...emailData, [e.target.name]: e.target.value });
+  };
+
+  const handleNewsLettersSubmit = (e) => {
+    e.preventDefault();
+    console.log(emailData);
+    dispatch(registerSubscribesEmail(emailData));
+    setEmailData({ email: '' });
+  };
+
   return (
     <div ref={ref}>
       <Style.StyledNewsLetterContainer animate={animation}>
         <h2>Subscribe to our newsletter</h2>
-        <form>
-          <input type='text' placeholder='reademsscholar@gmail.com' />
-          <button data-text='Subscribe'>Subscribe</button>
+        <form onSubmit={handleNewsLettersSubmit}>
+          <input
+            type='email'
+            placeholder='reademsscholar@gmail.com'
+            id='email'
+            name='email'
+            value={emailData.email}
+            onChange={handleChangeInput}
+          />
+          <button type='submit' data-text='Subscribe'>
+            Subscribe
+          </button>
         </form>
       </Style.StyledNewsLetterContainer>
     </div>

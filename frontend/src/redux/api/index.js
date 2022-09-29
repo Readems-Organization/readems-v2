@@ -16,6 +16,9 @@ API.interceptors.request.use((req) => {
 export const waitlistsRegister = (waitlistsData) =>
   API.post('/api/users/waitlists', waitlistsData);
 
+export const subscribesRegister = (subscribesRegisterData) =>
+  API.post('/api/subscribes/email', subscribesRegisterData);
+
 // export const translate = API.get(
 //   'http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate',
 // );

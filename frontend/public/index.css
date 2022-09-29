@@ -32,12 +32,12 @@ img {
 } */
 
 .google {
-  position: absolute;
+  position: fixed;
   right: 0;
   /* width: 200px; */
   height: 30px;
   overflow: hidden;
-  z-index: 999;
+  z-index: 1200;
 }
 
 .goog-te-banner-frame.skiptranslate,
