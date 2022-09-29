@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const StyledCardItemsContainer = styled.div`
+export const StyledCardItemsContainer = styled(motion.div)`
   width: 424px;
   height: 553px;
   padding: 19px 39px;

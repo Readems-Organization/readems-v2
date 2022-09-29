@@ -86,24 +86,57 @@ export const StyledFooterLogoContainer = styled(motion.div)`
   justify-content: space-between;
   flex-wrap: wrap;
 
-  div {
-    width: 25px;
-    margin: 0 15px;
-    cursor: pointer;
-  }
+  div a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 3rem;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 63px;
+    background-color: #0072ff;
+    border-radius: 50%;
+    color: #fff;
+    transition: 0.5s;
+    margin: 0 10px;
 
-  img {
-    width: 100%;
+    ::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #0072ff;
+      transition: 0.5s;
+      transform: scale(0.9);
+      z-index: -1;
+    }
+
+    :hover::before {
+      transform: scale(1.1);
+      box-shadow: 2px 2px 2px #0072ff, 10px 1px 12px #0072ff,
+        2px 2px 10px #0072ff, 2px 2px 3px #0072ff, inset 2px 2px 10px #0072ff,
+        inset 2px 2px 10px #0072ff, inset 2px 2px 10px #0072ff,
+        inset 2px 2px 10px #0072ff;
+    }
+
+    :hover {
+      color: #fff;
+      box-shadow: 0 0 5px #0072ff;
+      text-shadow: 0 0 5px #0072ff;
+    }
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size540}) {
     margin-top: 50px;
-    width: 150px;
     margin: auto;
 
-    div {
-      width: 20px;
-      margin: 0 5px;
+    div a {
+      margin: 0 15px;
     }
   }
 `;

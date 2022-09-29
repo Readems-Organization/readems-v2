@@ -2,14 +2,11 @@ import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledHeaderContainer = styled(motion.header)`
-  /* max-width: 1339px; */
   width: 100%;
   height: 85px;
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 20px; */
   position: sticky;
   top: 0;
   left: 0;
@@ -17,6 +14,7 @@ export const StyledHeaderContainer = styled(motion.header)`
   background: var(--bg-black-900);
   z-index: 99;
   margin-bottom: 50px;
+  margin-top: 30px;
 `;
 
 export const StyledHeaderLeftWrapper = styled(motion.div)``;
@@ -34,7 +32,6 @@ export const StyledLogo = styled(motion.img)`
 `;
 
 export const StyledLogoMenu = styled(motion.img)`
-  display: none;
   cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.mobile.size540}) {
@@ -55,7 +52,6 @@ export const StyledHeaderNav = styled(motion.ul)`
   width: 300px;
   display: flex;
   align-items: center;
-  /* border: 2px solid red; */
   justify-content: space-between;
 
   li a {
@@ -68,20 +64,10 @@ export const StyledHeaderNav = styled(motion.ul)`
     line-height: 23px;
   }
 
-  @media (max-width: ${({ theme }) => theme.mobile.size900}) {
-    width: 280px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.mobile.size768}) {
+  @media (max-width: ${({ theme }) => theme.mobile.size920}) {
     display: none;
   }
 `;
-
-// export const StyledButtonWrapper = styled.div`
-//   display: flex;
-//   align-items: center;
-//   gap: 20px;
-// `;
 
 export const StyledButtonWrapper = styled(motion.div)`
   display: flex;
@@ -103,7 +89,6 @@ export const StyledButtonWrapper = styled(motion.div)`
     border-radius: 5px;
     font-size: 1.5rem;
     font-weight: 700;
-    /* line-height: 24px; */
     background-color: inherit;
 
     ::before {
@@ -144,32 +129,16 @@ export const StyledButtonWrapper = styled(motion.div)`
     border-radius: 5px;
     font-size: 1.5rem;
     font-weight: 700;
-    /* line-height: 24px; */
     transition: color 0.8s ease;
     z-index: 999;
-    background-color: #fff;
+    background-color: var(--bg-black-900);
 
     ::before {
-      /* content: '';
-      position: absolute;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background-color: #0042ff;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 0;
-      width: 100%;
-      transition: all 0.8s ease;
-      z-index: -1; */
-
       content: attr(data-text);
       position: absolute;
       left: 0;
       top: 0;
-      background-color: #fff;
+      background-color: var(--bg-black-900);
       border: 2px solid #0042ff;
       height: 100%;
       width: 100%;
@@ -185,17 +154,8 @@ export const StyledButtonWrapper = styled(motion.div)`
     }
 
     :hover::before {
-      /* height: 100%;
-      top: 0;
-      bottom: auto;
-      color: red; */
-
       transform: rotateX(20deg);
     }
-
-    /* :hover {
-      color: #fff;
-    } */
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size540}) {
@@ -204,7 +164,6 @@ export const StyledButtonWrapper = styled(motion.div)`
     a:first-child {
       width: 90px;
       height: 40px;
-      /* font-size: 1.5rem; */
     }
   }
 
@@ -212,8 +171,6 @@ export const StyledButtonWrapper = styled(motion.div)`
     gap: 10px;
     a:last-child,
     a:first-child {
-      /* width: 70px;
-      height: 40px; */
       font-size: 1.8rem;
     }
   }

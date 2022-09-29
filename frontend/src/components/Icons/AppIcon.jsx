@@ -7,6 +7,10 @@ import {
   RiMenuFill,
   RiSearchLine,
   RiUserFill,
+  RiTwitterFill,
+  RiInstagramFill,
+  RiLinkedinFill,
+  RiFacebookFill,
 } from 'react-icons/ri';
 
 export default {
@@ -17,4 +21,8 @@ export default {
   Eye: RiEyeLine,
   EyeClose: RiEyeOffLine,
   User: RiUserFill,
+  Facebook: RiFacebookFill,
+  Instagram: RiInstagramFill,
+  Twitter: RiTwitterFill,
+  Linkedin: RiLinkedinFill,
 };

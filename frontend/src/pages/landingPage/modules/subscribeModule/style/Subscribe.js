@@ -68,7 +68,6 @@ export const StyledJoinReademsContainer = styled(motion.div)`
     line-height: 7.7rem;
   }
   button a {
-    /* margin: 0 auto; */
     width: 177px;
     height: 48px;
     display: flex;
@@ -111,7 +110,6 @@ export const StyledNewsLetterContainer = styled(motion.div)`
   button {
     background-color: transparent;
     color: #fff;
-    /* border: 1px solid #fff; */
     text-decoration: none;
     display: inline-block;
     position: relative;

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Button } from '../../../../components/buttons/Button';
 import { DiscoverTopics } from './DiscoverTopics';
 import {
   StyledDiscoverContainer,
@@ -17,7 +16,6 @@ export const DiscoverTopicsContents = () => {
   const animation = useAnimation();
 
   useEffect(() => {
-    console.log('Use effect view = ', inView);
     if (inView) {
       animation.start({
         x: 0,
@@ -41,7 +39,7 @@ export const DiscoverTopicsContents = () => {
       <StyledDiscoverContent animate={animation}>
         <div>
           <h4>Read free and premium content with ease</h4>
-          <button data-text='Library'>Enjoy</button>
+          <button data-text='Library'>Library</button>
         </div>
       </StyledDiscoverContent>
     </div>
@@ -93,8 +91,6 @@ export const DiscoverWriterContents = () => {
           type: 'spring',
           duration: 1,
           bounce: 0.3,
-          // stiffness: 20,
-          // delay: 1,
         },
       });
     }

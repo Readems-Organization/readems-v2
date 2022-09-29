@@ -16,7 +16,6 @@ export const PopularReads = () => {
   const animation = useAnimation();
 
   useEffect(() => {
-    console.log('Use effect view = ', inView);
     if (inView) {
       animation.start({
         y: 0,

@@ -1,34 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { StyledCardItemsContainer } from './style/CardItems';
-import { useAnimation, motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
-export const FirstCard = ({ icon, header, description, firstCard }) => {
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-  });
-  const animation = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        x: 0,
-        transition: {
-          type: 'spring',
-          duration: 1,
-          bounce: 0.3,
-        },
-      });
-    }
-
-    if (!inView) {
-      animation.start({
-        x: '100vw',
-      });
-    }
-  }, [inView]);
+export const FirstCard = ({
+  icon,
+  header,
+  description,
+  animation,
+  firstCard,
+}) => {
   return (
-    <div ref={ref}>
+    <div>
       <StyledCardItemsContainer animate={animation} firstCard={firstCard}>
         {icon}
         <h4>{header}</h4>
@@ -38,32 +19,15 @@ export const FirstCard = ({ icon, header, description, firstCard }) => {
   );
 };
 
-export const SecondCard = ({ icon, header, description, secondCard }) => {
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-  });
-  const animation = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        x: 0,
-        transition: {
-          type: 'spring',
-          duration: 1,
-          bounce: 0.3,
-        },
-      });
-    }
-
-    if (!inView) {
-      animation.start({
-        x: '-100vw',
-      });
-    }
-  }, [inView]);
+export const SecondCard = ({
+  icon,
+  header,
+  description,
+  animation,
+  secondCard,
+}) => {
   return (
-    <div ref={ref}>
+    <div>
       <StyledCardItemsContainer animate={animation} secondCard={secondCard}>
         {icon}
         <h4>{header}</h4>
@@ -73,10 +37,16 @@ export const SecondCard = ({ icon, header, description, secondCard }) => {
   );
 };
 
-export const ThirdCard = ({ icon, header, description, thirdCard }) => {
+export const ThirdCard = ({
+  icon,
+  header,
+  description,
+  animation,
+  thirdCard,
+}) => {
   return (
     <div>
-      <StyledCardItemsContainer thirdCard={thirdCard}>
+      <StyledCardItemsContainer thirdCard={thirdCard} animate={animation}>
         {icon}
         <h4>{header}</h4>
         <p>{description}</p>

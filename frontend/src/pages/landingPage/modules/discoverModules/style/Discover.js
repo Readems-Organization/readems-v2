@@ -51,7 +51,6 @@ export const StyledDiscoverContent = styled(motion.div)`
   button {
     background-color: transparent;
     color: #fff;
-    /* border: 1px solid #fff; */
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -103,6 +102,11 @@ export const StyledDiscoverContent = styled(motion.div)`
       width: 100%;
       text-align: center;
       margin-bottom: 20px;
+    }
+
+    button {
+      width: 150px;
+      height: 40px;
     }
   }
 `;
@@ -196,8 +200,6 @@ export const StyledDiscoverWriterContent = styled(motion.div)`
     }
 
     p {
-      /* width: 350px; */
-      /* font-size: 20px; */
       margin: 20px 0;
     }
 

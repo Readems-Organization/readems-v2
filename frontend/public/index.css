@@ -13,12 +13,7 @@ body {
   border: 2px solid red;
 }
 
-.google {
-  border: 5px solid yellow;
-  width: 200px;
-  height: 30px;
-  overflow: hidden;
-}
+
 
 .goog-te-gadget img {
   vertical-align: middle;
@@ -35,6 +30,15 @@ img {
   right: 0;
   top: 0;
 } */
+
+.google {
+  position: absolute;
+  right: 0;
+  /* width: 200px; */
+  height: 30px;
+  overflow: hidden;
+  z-index: 999;
+}
 
 .goog-te-banner-frame.skiptranslate,
 .goog-te-gadget-simple img {

@@ -27,7 +27,6 @@ export const StyledHeroSectionLeft = styled(motion.div)`
   }
 
   p {
-    /* color: #1d1a27; */
     color: var(--text-black-900);
     font-size: 4rem;
     font-weight: 400;
@@ -66,7 +65,6 @@ export const StyledButtonWrapper = styled.div`
 
   button:first-child {
     color: #0042ff;
-    /* border: 2px solid #0042ff; */
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -108,7 +106,6 @@ export const StyledButtonWrapper = styled.div`
 
   button:last-child {
     color: #0042ff;
-    /* border: 2px solid #0042ff; */
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -128,21 +125,6 @@ export const StyledButtonWrapper = styled.div`
     background-color: #fff;
 
     ::before {
-      /* content: '';
-      position: absolute;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background-color: #0042ff;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 0;
-      width: 100%;
-      transition: all 0.8s ease;
-      z-index: -1; */
-
       content: attr(data-text);
       position: absolute;
       left: 0;
@@ -163,21 +145,12 @@ export const StyledButtonWrapper = styled.div`
     }
 
     :hover::before {
-      /* height: 100%;
-      top: 0;
-      bottom: auto;
-      color: red; */
-
       transform: rotateX(20deg);
     }
-
-    /* :hover {
-      color: #fff;
-    } */
   }
 `;
 
-export const StyledDescription = styled.p`
+export const StyledDescription = styled(motion.p)`
   max-width: 1005px;
   width: 100%;
   margin: auto;

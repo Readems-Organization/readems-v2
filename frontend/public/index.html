@@ -19,12 +19,12 @@
 
     <title>Readems</title>
     <link rel="stylesheet" href="index.css" />
-    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
-    <!-- <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+    <!-- <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script> -->
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </head>
   <body>
-    <div id="google_element" class="google"></div>
-    <!-- <div id="google_translate_element" class="google"></div> -->
+    <!-- <div id="google_element" class="google"></div> -->
+    <div id="google_translate_element" class="google"></div>
     <div id="root"></div>
 
     <script>
@@ -32,18 +32,18 @@
         new google.translate.TranslateElement('google_element');
       }
 
-      // function googleTranslateElementInit() {
-      //   new google.translate.TranslateElement(
-      //     {
-      //       defaultLanguage: 'en',
-      //       pageLanguage: 'en',
-      //       layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      //       // autoDisplay: false,
-      //       // multilanguagePage: true,
-      //     },
-      //     'google_translate_element',
-      //   );
-      // }
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            defaultLanguage: 'en',
+            // pageLanguage: 'en',
+            // layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            // autoDisplay: true,
+            multilanguagePage: true,
+          },
+          'google_translate_element',
+        );
+      }
     </script>
   </body>
 </html>

@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useAnimation, motion } from 'framer-motion';
+import { useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Button } from '../../../../components/buttons/Button';
 import * as Style from './style/Subscribe';
 
 export const JoinReadems = () => {

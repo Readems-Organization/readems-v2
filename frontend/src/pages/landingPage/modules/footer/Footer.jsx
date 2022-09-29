@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import AppIcon from '../../../../components/Icons/AppIcon';
 import * as Styles from './style/Footer';
 
 export const Footer = () => {
@@ -23,16 +25,24 @@ export const Footer = () => {
 
         <Styles.StyledFooterLogoContainer>
           <div>
-            <img src='/svgs/facebook.svg' alt='' />
+            <Link to='https://www.facebook.com/ReademsHQ' target='_blank'>
+              <AppIcon.Facebook />
+            </Link>
           </div>
           <div>
-            <img src='/svgs/twitter.svg' alt='' />
+            <Link to='https://www.twitter.com/Readems_HQ' target='_blank'>
+              <AppIcon.Twitter />
+            </Link>
           </div>
           <div>
-            <img src='/svgs/instagram.svg' alt='' />
+            <Link to='https://www.instagram.com/Readems_hq' target='_blank'>
+              <AppIcon.Instagram />
+            </Link>
           </div>
           <div>
-            <img src='/svgs/linkedin.svg' alt='' />
+            <Link to='https://www.facebook.com/ReademsHQ' target='_blank'>
+              <AppIcon.Linkedin />
+            </Link>
           </div>
         </Styles.StyledFooterLogoContainer>
       </Styles.StyledFooterContainer>

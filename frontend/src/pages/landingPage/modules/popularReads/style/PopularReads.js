@@ -10,7 +10,6 @@ export const StyledPopularReadsContainer = styled(motion.div)`
     font-weight: 700;
     font-size: 4.8rem;
     line-height: 5.8rem;
-    /* color: #0c0b11; */
     color: var(--text-black-900);
   }
 
