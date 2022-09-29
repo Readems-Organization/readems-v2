@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import {
-  StyledHeaderContainer,
-  StyledLogo,
-  StyledLogoMenu,
-  StyledHeaderNav,
-  StyledButtonWrapper,
-} from './styles/Header';
+import { NavLink, Link } from 'react-router-dom';
+import * as Styles from './styles/Header';
 
-import { Button } from '../../buttons/Button';
 import { AnimatePresence } from 'framer-motion';
 import Sidebar from '../../sidebar/SidebarSecond';
 
@@ -16,10 +9,18 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <StyledHeaderContainer>
+      <Styles.StyledHeaderContainer>
         <div>
-          <StyledLogo
+          <Styles.StyledLogo
             src='/svgs/Logo.svg'
+            alt=''
+            initial={{ y: -550 }}
+            animate={{ y: 0 }}
+            transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
+          />
+
+          <Styles.StyledLogoSmall
+            src='/svgs/Logo-1.svg'
             alt=''
             initial={{ y: -550 }}
             animate={{ y: 0 }}
@@ -27,23 +28,32 @@ const Header = () => {
           />
         </div>
 
-        <StyledHeaderNav>
+        <Styles.StyledHeaderNav>
           <li>
             <NavLink to='/writers'>Writers</NavLink>
           </li>
           <li>
-            <NavLink to='/Readers'>Readers</NavLink>
+            <NavLink to='/readers'>Readers</NavLink>
           </li>
           <li>
             <NavLink to='/resources'>Resources</NavLink>
           </li>
-        </StyledHeaderNav>
+        </Styles.StyledHeaderNav>
 
-        <StyledButtonWrapper>
-          <Button secondary>Login</Button>
-          <Button>Sign up for free</Button>
-        </StyledButtonWrapper>
-        <StyledLogoMenu
+        <Styles.StyledButtonWrapper
+          initial={{ y: -550 }}
+          animate={{ y: 0 }}
+          transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
+        >
+          <Link to='/users/signin' data-text='Login'>
+            Login
+          </Link>
+
+          <Link to='/users/signup' data-text='Sign up for free'>
+            Sign up for free
+          </Link>
+        </Styles.StyledButtonWrapper>
+        <Styles.StyledLogoMenu
           src='/svgs/menu.svg'
           alt=''
           initial={{ y: -550 }}
@@ -51,7 +61,7 @@ const Header = () => {
           transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
           onClick={() => setIsOpen(true)}
         />
-      </StyledHeaderContainer>
+      </Styles.StyledHeaderContainer>
       <AnimatePresence>
         {isOpen && <Sidebar setIsOpen={() => setIsOpen(false)} />}
       </AnimatePresence>

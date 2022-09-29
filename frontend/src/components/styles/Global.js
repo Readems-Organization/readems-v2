@@ -49,6 +49,16 @@ export const GlobalStyle = createGlobalStyle`
 
 }
 
+html {
+  font-size: 10px;
+}
+
+@media (max-width:420px){
+  html {
+    font-size: 6px;
+  }
+}
+
 body {
   background-color: var(--bg-black-900);
   color: var(--text-black-900);
@@ -69,10 +79,6 @@ body {
   body, h1, h2, h3, h4, h5, h6, p, ol, ul, button, span {
     margin: 0;
     padding: 0;
-    /* font-family: ${({ theme }) => theme.fontFamily.primary}; */
-    /* font-family: 'Lato', sans-serif; */
-     /* color: var(--text-black-900); */
-
   }
 
 
@@ -85,10 +91,10 @@ body {
     color: #000;
   }
 
-  img {
+  /* img {
     width:100% ;
     object-fit: cover;
-  }
+  } */
 
   button {
     cursor: pointer;
@@ -119,6 +125,32 @@ export const AppContainer = styled.div`
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;
-  /* border: 2px solid ${({ theme }) => theme.colors.greyishNavy}; */
   padding: 0 30px;
+  overflow: hidden;
+
+  .google {
+    border: 5px solid yellow;
+    width: 200px;
+    height: 30px;
+    overflow: hidden;
+  }
+
+  .goog-te-banner-frame.skiptranslate,
+  .goog-te-gadget-simple img {
+    display: none !important;
+  }
+
+  .goog-tooltip {
+    display: none !important;
+  }
+
+  .goog-tooltip:hover {
+    display: none !important;
+  }
+
+  .goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
 `;

@@ -16,25 +16,23 @@ export const StyledHeroSection = styled(motion.div)`
 
 export const StyledHeroSectionLeft = styled(motion.div)`
   width: 670px;
-  /* border: 2px solid red; */
+
   h2 {
-    /* color: #1d1a27; */
     color: var(--text-black-900);
-    font-size: 69px;
+    font-size: 6.9rem;
     font-weight: 700;
-    line-height: 83px;
+    line-height: 8.3rem;
     margin-bottom: 10px;
-    /* opacity: 0.9; */
+    text-align: center;
   }
 
   p {
-    /* color: #1d1a27; */
     color: var(--text-black-900);
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 400;
-    line-height: 48px;
+    line-height: 4.8rem;
     margin-bottom: 20px;
-    /* opacity: 0.9; */
+    text-align: center;
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
@@ -43,53 +41,18 @@ export const StyledHeroSectionLeft = styled(motion.div)`
     width: 100%;
     margin: 0 auto;
     margin-top: 30px;
-    /* border: 2px solid green; */
-
-    h2 {
-      font-size: 52px;
-      line-height: 53px;
-    }
-
-    p {
-      font-size: 30px;
-      line-height: 35px;
-    }
-  }
-
-  @media (max-width: ${({ theme }) => theme.mobile.size420}) {
-    h2 {
-      font-size: 40px;
-      line-height: 38px;
-    }
-
-    p {
-      font-size: 20px;
-      line-height: 25px;
-    }
-  }
-
-  @media (max-width: ${({ theme }) => theme.mobile.size375}) {
-    h2 {
-      font-size: 35px;
-      line-height: 33px;
-    }
-
-    p {
-      font-size: 20px;
-      line-height: 25px;
-    }
   }
 `;
 export const StyledHeroSectionRight = styled(motion.div)`
   img {
-    /* width: 320px; */
+    width: 100%;
+    vertical-align: middle;
   }
 `;
 
 export const StyledButtonWrapper = styled.div`
   display: flex;
   align-items: center;
-
   margin: auto;
   gap: 40px;
   margin-top: 50px;
@@ -97,17 +60,104 @@ export const StyledButtonWrapper = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
     justify-content: center;
+    display: flex;
+  }
+
+  button:first-child {
+    color: #0042ff;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    perspective: 50px;
+    width: 177px;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    background-color: inherit;
+
+    ::before {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #0042ff;
+      height: 100%;
+      width: 100%;
+      color: #fff;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      transition: transform 1s ease;
+      transform-origin: bottom;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
+    :hover::before {
+      transform: rotateX(20deg);
+    }
+  }
+
+  button:last-child {
+    color: #0042ff;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    perspective: 50px;
+    width: 177px;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    transition: color 0.8s ease;
+    z-index: 999;
+    background-color: #fff;
+
+    ::before {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #fff;
+      border: 2px solid #0042ff;
+      height: 100%;
+      width: 100%;
+      color: #0042ff;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      transition: transform 1s ease;
+      transform-origin: bottom;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    :hover::before {
+      transform: rotateX(20deg);
+    }
   }
 `;
 
-export const StyledDescription = styled.p`
+export const StyledDescription = styled(motion.p)`
   max-width: 1005px;
   width: 100%;
   margin: auto;
   margin-top: 80px;
   font-weight: 400;
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 4rem;
+  line-height: 4.8rem;
   text-align: center;
 
   span {
@@ -115,14 +165,10 @@ export const StyledDescription = styled.p`
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
-    font-size: 30px;
-    line-height: 38px;
     margin-top: 40px;
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size420}) {
-    font-size: 22px;
-    line-height: 30px;
     font-weight: 500;
     margin-top: 20px;
   }

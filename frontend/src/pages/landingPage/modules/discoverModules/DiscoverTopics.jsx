@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyledDiscoverTopicsContainer } from './style/DiscoverTopics';
 
-export const DiscoverTopics = () => {
+export const DiscoverTopics = ({ animation }) => {
   return (
-    <StyledDiscoverTopicsContainer>
+    <StyledDiscoverTopicsContainer animate={animation}>
       <li>Comic</li>
       <li>Non-fiction</li>
       <li>Fiction</li>

@@ -16,8 +16,5 @@ ReactDOM.render(
       <App />
     </Provider>
   </ThemeProvider>,
-
   document.getElementById('root'),
-
-  // document.getElementById('google_element'),
 );

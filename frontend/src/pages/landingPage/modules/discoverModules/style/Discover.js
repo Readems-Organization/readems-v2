@@ -6,26 +6,18 @@ export const StyledDiscoverContainer = styled(motion.div)`
   margin: auto;
   margin-top: 30px;
   margin-bottom: 50px;
-  border: 2px solid green;
   border-radius: 5px;
 
   h2 {
     font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
-    /* color: #0c0b11; */
-    /* color: var(--text-black-900); */
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+    color: var(--text-black-900);
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size900}) {
     h2 {
       text-align: center;
-    }
-  }
-
-  @media (max-width: ${({ theme }) => theme.mobile.size420}) {
-    h2 {
-      font-size: 38px;
     }
   }
 `;
@@ -36,37 +28,85 @@ export const StyledDiscoverContent = styled(motion.div)`
   background-image: url('/svgs/background-img.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-position: center; */
   padding: 0 30px;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 
   div {
     margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 50px;
   }
-
-  border: 2px solid red;
 
   h4 {
     width: 380px;
-    font-size: 26px;
+    font-size: 2.6rem;
     font-weight: 700;
     color: #fff;
-    /* color: var(--text-black-900); */
+  }
+
+  button {
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    perspective: 50px;
+    width: 252px;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: color 0.8s ease;
+    z-index: 999;
+
+    ::before {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #0042ff;
+      border: 1px solid #fff;
+      height: 100%;
+      width: 100%;
+      color: #fff;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      transition: transform 1s ease;
+      transform-origin: bottom;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    :hover::before {
+      transform: rotateX(20deg);
+    }
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size420}) {
+    height: 200px;
     div {
       flex-direction: column;
     }
 
     h4 {
       width: 100%;
-      font-size: 26px;
       text-align: center;
       margin-bottom: 20px;
+    }
+
+    button {
+      width: 150px;
+      height: 40px;
     }
   }
 `;
@@ -101,11 +141,52 @@ export const StyledDiscoverWriterContent = styled(motion.div)`
   text-align: center;
   p {
     width: 450px;
-    font-size: 25px;
+    font-size: 2.5rem;
     margin: 30px 0;
   }
   button {
-    margin: auto;
+    background-color: transparent;
+    color: #fff;
+    /* border: 1px solid #fff; */
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    perspective: 50px;
+    width: 252px;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: color 0.8s ease;
+    z-index: 999;
+
+    ::before {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #0042ff;
+      border: 1px solid #fff;
+      height: 100%;
+      width: 100%;
+      color: #fff;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      transition: transform 1s ease;
+      transform-origin: bottom;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    :hover::before {
+      transform: rotateX(20deg);
+    }
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size900}) {
@@ -114,13 +195,11 @@ export const StyledDiscoverWriterContent = styled(motion.div)`
     }
 
     h2 {
-      font-size: 30px;
+      font-size: 3rem;
       line-height: normal;
     }
 
     p {
-      width: 350px;
-      font-size: 20px;
       margin: 20px 0;
     }
 
@@ -132,13 +211,13 @@ export const StyledDiscoverWriterContent = styled(motion.div)`
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
     width: 100%;
-  }
 
-  @media (max-width: ${({ theme }) => theme.mobile.size375}) {
+    h2 {
+      margin-top: 20px;
+    }
+
     p {
       width: 100%;
-      font-size: 20px;
-      margin: 20px 0;
     }
   }
 `;

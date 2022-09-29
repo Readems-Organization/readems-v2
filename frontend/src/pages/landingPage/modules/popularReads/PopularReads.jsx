@@ -5,11 +5,39 @@ import {
   StyledPopularReadsContainer,
 } from './style/PopularReads';
 
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
+import { useEffect } from 'react';
+
 export const PopularReads = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        y: 0,
+        transition: {
+          type: 'spring',
+          duration: 1,
+          // bounce: 0.3,
+          stiffness: 120,
+        },
+      });
+    }
+
+    if (!inView) {
+      animation.start({
+        y: '-550',
+      });
+    }
+  }, [inView]);
   return (
     <StyledPopularReadsContainer>
       <h2>Popular Reads</h2>
-      <StyledPopularReadsCardWrapper>
+      <StyledPopularReadsCardWrapper ref={ref}>
         <PopularReadCard
           title='Writer queen'
           pic={<img src='/svgs/img-4.png' alt='' />}
@@ -17,6 +45,7 @@ export const PopularReads = () => {
           description='The practice roadmap for techies in 21st century'
           time='5 min Read'
           date='July 28'
+          animation={animation}
         />
         <PopularReadCard
           title='Writer queen'
@@ -25,6 +54,7 @@ export const PopularReads = () => {
           description='The practice roadmap for techies in 21st century'
           time='5 min Read'
           date='July 28'
+          animation={animation}
         />
         <PopularReadCard
           title='Writer queen'
@@ -33,6 +63,7 @@ export const PopularReads = () => {
           description='The practice roadmap for techies in 21st century'
           time='5 min Read'
           date='July 28'
+          animation={animation}
         />
         <PopularReadCard
           title='Writer queen'
@@ -41,6 +72,7 @@ export const PopularReads = () => {
           description='The practice roadmap for techies in 21st century'
           time='5 min Read'
           date='July 28'
+          animation={animation}
         />
         <PopularReadCard
           title='Writer queen'
@@ -49,6 +81,7 @@ export const PopularReads = () => {
           description='The practice roadmap for techies in 21st century'
           time='5 min Read'
           date='July 28'
+          animation={animation}
         />
         <PopularReadCard
           title='Writer queen'
@@ -57,6 +90,7 @@ export const PopularReads = () => {
           description='The practice roadmap for techies in 21st century'
           time='5 min Read'
           date='July 28'
+          animation={animation}
         />
       </StyledPopularReadsCardWrapper>
     </StyledPopularReadsContainer>

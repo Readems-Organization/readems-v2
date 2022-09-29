@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  StyledCardIcon,
-  StyledCardPic,
-  StyledReadCardContainer,
-  StyledCardTitle,
-  StyledCardInfo,
-} from './style/PopularReadCard';
+import * as Styled from './style/PopularReadCard';
 
 export const PopularReadCard = ({
   title,
@@ -14,23 +8,24 @@ export const PopularReadCard = ({
   description,
   date,
   time,
+  animation,
 }) => {
   return (
-    <StyledReadCardContainer>
-      <StyledCardTitle>
+    <Styled.StyledReadCardContainer animate={animation}>
+      <Styled.StyledCardTitle>
         <span /> <p>{title}</p>
-      </StyledCardTitle>
-      <StyledCardPic>{pic}</StyledCardPic>
+      </Styled.StyledCardTitle>
+      <Styled.StyledCardPic>{pic}</Styled.StyledCardPic>
       <h3>{header}</h3>
       <small>{description}</small>
-      <StyledCardInfo>
+      <Styled.StyledCardInfo>
         <span>{date}</span>
         <span>{time}</span>
         <button>Tech Education</button>
-        <StyledCardIcon>
+        <Styled.StyledCardIcon>
           <img src='/svgs/star.svg' alt='' />
-        </StyledCardIcon>
-      </StyledCardInfo>
-    </StyledReadCardContainer>
+        </Styled.StyledCardIcon>
+      </Styled.StyledCardInfo>
+    </Styled.StyledReadCardContainer>
   );
 };

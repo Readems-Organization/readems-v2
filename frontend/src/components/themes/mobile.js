@@ -6,6 +6,7 @@ export const mobile = {
   size540: '540px',
   size768: '768px',
   size900: '900px',
+  size920: '920px',
   size1100: '1100px',
   size1600: '1600px',
 };
