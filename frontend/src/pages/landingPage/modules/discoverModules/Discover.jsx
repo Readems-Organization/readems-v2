@@ -38,8 +38,8 @@ export const DiscoverTopicsContents = () => {
       <h2>Topics for you</h2>
       <StyledDiscoverContent animate={animation}>
         <div>
-          <h4>Read free and premium content with ease</h4>
-          <button data-text='Library'>Library</button>
+          <h4>Find Content You Love Based On Your Interests</h4>
+          <button data-text='Start reading'>Start reading</button>
         </div>
       </StyledDiscoverContent>
     </div>

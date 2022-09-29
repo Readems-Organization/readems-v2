@@ -3,18 +3,19 @@ import { motion } from 'framer-motion';
 
 export const StyledHeaderContainer = styled(motion.header)`
   width: 100%;
-  height: 85px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   margin: 0 auto;
   background: var(--bg-black-900);
-  z-index: 99;
-  margin-bottom: 50px;
-  margin-top: 30px;
+  z-index: 1000;
+  padding: 0 20px;
 `;
 
 export const StyledHeaderLeftWrapper = styled(motion.div)``;
@@ -22,6 +23,7 @@ export const StyledHeaderRightWrapper = styled(motion.div)``;
 
 export const StyledLogo = styled(motion.img)`
   width: 180px;
+
   @media (max-width: ${({ theme }) => theme.mobile.size900}) {
     width: 120px;
   }
