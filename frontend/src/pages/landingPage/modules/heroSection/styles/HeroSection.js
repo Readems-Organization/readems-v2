@@ -93,7 +93,7 @@ export const StyledButtonWrapper = styled.div`
       color: #fff;
       padding: 12px 20px;
       box-sizing: border-box;
-      transition: transform 1s ease;
+      transition: transform 0.5s ease;
       transform-origin: bottom;
       display: flex;
       align-items: center;
@@ -137,7 +137,7 @@ export const StyledButtonWrapper = styled.div`
       color: #0042ff;
       padding: 12px 20px;
       box-sizing: border-box;
-      transition: transform 1s ease;
+      transition: transform 0.5s ease;
       transform-origin: bottom;
       display: flex;
       align-items: center;

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const StyledHeaderContainer = styled(motion.header)`
   width: 100%;
-  height: 150px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,6 +16,11 @@ export const StyledHeaderContainer = styled(motion.header)`
   background: var(--bg-black-900);
   z-index: 1000;
   padding: 0 20px;
+  /* border: 2px solid red; */
+
+  @media (max-width: ${({ theme }) => theme.mobile.size768}) {
+    height: 120px;
+  }
 `;
 
 export const StyledHeaderLeftWrapper = styled(motion.div)``;
@@ -104,7 +109,7 @@ export const StyledButtonWrapper = styled(motion.div)`
       color: #fff;
       padding: 12px 20px;
       box-sizing: border-box;
-      transition: transform 1s ease;
+      transition: transform 0.5s ease;
       transform-origin: bottom;
       display: flex;
       align-items: center;
@@ -147,7 +152,7 @@ export const StyledButtonWrapper = styled(motion.div)`
       color: #0042ff;
       padding: 12px 20px;
       box-sizing: border-box;
-      transition: transform 1s ease;
+      transition: transform 0.5s ease;
       transform-origin: bottom;
       display: flex;
       align-items: center;

@@ -24,7 +24,7 @@ const containerVariants = {
   },
   exit: {
     x: 1800,
-    transition: { type: 'spring', delay: 0.2 },
+    transition: { type: 'spring' },
   },
 };
 
@@ -39,7 +39,7 @@ const Sidebar = ({ setIsOpen }) => (
       <StyledSidebarHeader
         initial={{ y: -550 }}
         animate={{ y: 0 }}
-        transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
+        transition={{ type: 'spring', stiffness: 120 }}
       >
         <button type='button' onClick={() => setIsOpen(false)}>
           <AppIcon.Close />

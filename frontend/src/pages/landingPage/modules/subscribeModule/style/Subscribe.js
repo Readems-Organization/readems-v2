@@ -109,7 +109,6 @@ export const StyledNewsLetterContainer = styled(motion.div)`
 
   button {
     background-color: transparent;
-    /* color: #fff; */
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -138,7 +137,7 @@ export const StyledNewsLetterContainer = styled(motion.div)`
       color: #fff;
       padding: 12px 20px;
       box-sizing: border-box;
-      transition: transform 1s ease;
+      transition: transform 0.5s ease;
       transform-origin: bottom;
       display: flex;
       align-items: center;

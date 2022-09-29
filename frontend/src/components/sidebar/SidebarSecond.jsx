@@ -15,7 +15,7 @@ import { Writers, Readers, Pricing, Explore, Search } from '../Icons';
 const containerVariants = {
   hidden: {
     opacity: 0,
-    x: '-100vw',
+    x: '-50vw',
   },
   visible: {
     opacity: 1,
