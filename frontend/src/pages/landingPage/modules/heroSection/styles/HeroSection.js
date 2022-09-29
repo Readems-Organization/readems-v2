@@ -25,7 +25,6 @@ export const StyledHeroSectionLeft = styled(motion.div)`
     font-weight: 700;
     line-height: 8.3rem;
     margin-bottom: 10px;
-    text-align: center;
   }
 
   p {
@@ -34,7 +33,6 @@ export const StyledHeroSectionLeft = styled(motion.div)`
     font-weight: 400;
     line-height: 4.8rem;
     margin-bottom: 20px;
-    text-align: center;
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
@@ -43,6 +41,7 @@ export const StyledHeroSectionLeft = styled(motion.div)`
     width: 100%;
     margin: 0 auto;
     margin-top: 30px;
+    text-align: center;
   }
 `;
 export const StyledHeroSectionRight = styled(motion.div)`
