@@ -49,7 +49,7 @@ export const StyledDiscoverContent = styled(motion.div)`
   }
 
   button {
-    background-color: transparent;
+    /* background-color: transparent; */
     color: #fff;
     text-decoration: none;
     display: inline-block;
@@ -66,29 +66,34 @@ export const StyledDiscoverContent = styled(motion.div)`
     font-weight: 700;
     transition: color 0.8s ease;
     z-index: 999;
+    background-color: #0042ff;
+    border: 1px solid #fff;
 
     ::before {
-      content: attr(data-text);
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-color: #0042ff;
-      border: 1px solid #fff;
-      height: 100%;
-      width: 100%;
-      color: #fff;
-      padding: 12px 20px;
-      box-sizing: border-box;
-      transition: transform 0.5s ease;
-      transform-origin: bottom;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 5px;
+      /* content: attr(data-text);
+             position: absolute;
+             left: 0;
+             top: 0;
+             background-color: #0042ff;
+             border: 1px solid #fff;
+             height: 100%;
+             width: 100%;
+             color: #fff;
+             padding: 12px 20px;
+             box-sizing: border-box;
+             transition: transform 0.5s ease;
+             transform-origin: bottom;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             border-radius: 5px; */
     }
 
-    :hover::before {
-      transform: rotateX(20deg);
+    :hover {
+      /* transform: rotateY(20deg); */
+      transform: scale(1.1);
+      box-shadow: 0 0 5px #00000080;
+      text-shadow: 0 0 5px #0042ff;
     }
   }
 
@@ -145,7 +150,7 @@ export const StyledDiscoverWriterContent = styled(motion.div)`
     margin: 30px 0;
   }
   button {
-    background-color: transparent;
+    /* background-color: transparent; */
     color: #fff;
     text-decoration: none;
     display: inline-block;
@@ -162,29 +167,34 @@ export const StyledDiscoverWriterContent = styled(motion.div)`
     font-weight: 700;
     transition: color 0.8s ease;
     z-index: 999;
+    background-color: #0042ff;
+    border: 1px solid #fff;
 
     ::before {
-      content: attr(data-text);
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-color: #0042ff;
-      border: 1px solid #fff;
-      height: 100%;
-      width: 100%;
-      color: #fff;
-      padding: 12px 20px;
-      box-sizing: border-box;
-      transition: transform 0.5s ease;
-      transform-origin: bottom;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 5px;
+      /* content: attr(data-text);
+             position: absolute;
+             left: 0;
+             top: 0;
+             background-color: #0042ff;
+             border: 1px solid #fff;
+             height: 100%;
+             width: 100%;
+             color: #fff;
+             padding: 12px 20px;
+             box-sizing: border-box;
+             transition: transform 0.5s ease;
+             transform-origin: bottom;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             border-radius: 5px; */
     }
 
-    :hover::before {
-      transform: rotateX(20deg);
+    :hover {
+      /* transform: rotateY(20deg); */
+      transform: scale(1.1);
+      box-shadow: 0 0 5px #00000080;
+      text-shadow: 0 0 5px #0042ff;
     }
   }
 

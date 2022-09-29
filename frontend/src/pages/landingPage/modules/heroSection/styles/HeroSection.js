@@ -65,7 +65,7 @@ export const StyledButtonWrapper = styled.div`
   }
 
   button:first-child {
-    color: #0042ff;
+    color: #fff;
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -80,28 +80,31 @@ export const StyledButtonWrapper = styled.div`
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
-    background-color: inherit;
+    background-color: #0042ff;
 
     ::before {
-      content: attr(data-text);
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-color: #0042ff;
-      height: 100%;
-      width: 100%;
-      color: #fff;
-      padding: 12px 20px;
-      box-sizing: border-box;
-      transition: transform 0.5s ease;
-      transform-origin: bottom;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 5px;
+      /* content: attr(data-text);
+             position: absolute;
+             left: 0;
+             top: 0;
+             background-color: #0042ff;
+             height: 100%;
+             width: 100%;
+             color: #fff;
+             padding: 12px 20px;
+             box-sizing: border-box;
+             transition: transform 0.5s ease;
+             transform-origin: bottom;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             border-radius: 5px; */
     }
-    :hover::before {
-      transform: rotateX(20deg);
+    :hover {
+      /* transform: rotateY(20deg); */
+      transform: scale(1.1);
+      box-shadow: 0 0 5px #00000080;
+      text-shadow: 0 0 5px #0042ff;
     }
   }
 
@@ -124,29 +127,33 @@ export const StyledButtonWrapper = styled.div`
     transition: color 0.8s ease;
     z-index: 999;
     background-color: #fff;
+    border: 2px solid #0042ff;
 
     ::before {
-      content: attr(data-text);
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-color: #fff;
-      border: 2px solid #0042ff;
-      height: 100%;
-      width: 100%;
-      color: #0042ff;
-      padding: 12px 20px;
-      box-sizing: border-box;
-      transition: transform 0.5s ease;
-      transform-origin: bottom;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 5px;
+      /* content: attr(data-text);
+             position: absolute;
+             left: 0;
+             top: 0;
+             background-color: #fff;
+             border: 2px solid #0042ff;
+             height: 100%;
+             width: 100%;
+             color: #0042ff;
+             padding: 12px 20px;
+             box-sizing: border-box;
+             transition: transform 0.5s ease;
+             transform-origin: bottom;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             border-radius: 5px; */
     }
 
-    :hover::before {
-      transform: rotateX(20deg);
+    :hover {
+      /* transform: rotateY(20deg); */
+      transform: scale(1.1);
+      box-shadow: 0 0 5px #00000080;
+      /* text-shadow: 0 0 5px #0042ff; */
     }
   }
 `;

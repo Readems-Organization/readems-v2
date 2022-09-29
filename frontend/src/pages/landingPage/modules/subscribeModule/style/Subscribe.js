@@ -69,7 +69,7 @@ export const StyledJoinReademsContainer = styled(motion.div)`
   }
   button a {
     width: 177px;
-    height: 48px;
+    height: 54px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,6 +81,7 @@ export const StyledJoinReademsContainer = styled(motion.div)`
     background-color: #0042ff;
     color: #fff;
     position: relative;
+    /* padding: 10px; */
 
     :hover {
       animation: ripple 1s linear infinite;
@@ -89,7 +90,7 @@ export const StyledJoinReademsContainer = styled(motion.div)`
     @keyframes ripple {
       0% {
         width: 150px;
-        height: 48px;
+        height: 54px;
         opacity: 0.5px;
       }
       100% {
@@ -108,7 +109,7 @@ export const StyledNewsLetterContainer = styled(motion.div)`
   }
 
   button {
-    background-color: transparent;
+    /* background-color: transparent; */
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -124,9 +125,12 @@ export const StyledNewsLetterContainer = styled(motion.div)`
     font-weight: 700;
     transition: color 0.8s ease;
     z-index: 999;
+    background-color: #0042ff;
+    border: 1px solid #fff;
+    color: #fff;
 
     ::before {
-      content: attr(data-text);
+      /* content: attr(data-text);
       position: absolute;
       left: 0;
       top: 0;
@@ -142,11 +146,14 @@ export const StyledNewsLetterContainer = styled(motion.div)`
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 5px;
+      border-radius: 5px; */
     }
 
-    :hover::before {
-      transform: rotateX(20deg);
+    :hover {
+      /* transform: rotateY(20deg); */
+      transform: scale(1.1);
+      box-shadow: 0 0 5px #00000080;
+      text-shadow: 0 0 5px #0042ff;
     }
   }
 `;

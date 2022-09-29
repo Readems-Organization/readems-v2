@@ -82,7 +82,7 @@ export const StyledButtonWrapper = styled(motion.div)`
   gap: 20px;
 
   a:last-child {
-    color: #0042ff;
+    /* color: #0042ff; */
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -96,15 +96,17 @@ export const StyledButtonWrapper = styled(motion.div)`
     border-radius: 5px;
     font-size: 1.5rem;
     font-weight: 700;
-    background-color: inherit;
+    background-color: #0042ff;
+    color: #fff;
+    z-index: 999;
 
     ::before {
-      content: attr(data-text);
+      /* content: '';
       position: absolute;
       left: 0;
-      top: 0;
-      background-color: #0042ff;
-      height: 100%;
+      top: 0; */
+      /* background-color: inherit; */
+      /* height: 100%;
       width: 100%;
       color: #fff;
       padding: 12px 20px;
@@ -114,10 +116,17 @@ export const StyledButtonWrapper = styled(motion.div)`
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 5px;
+      border-radius: 5px; */
     }
     :hover::before {
-      transform: rotateX(20deg);
+      /* transform: rotateX(20deg); */
+    }
+
+    :hover {
+      /* transform: rotateY(20deg); */
+      transform: scale(1.1);
+      box-shadow: 0 0 5px #00000080;
+      text-shadow: 0 0 5px #0042ff;
     }
   }
 
@@ -139,29 +148,32 @@ export const StyledButtonWrapper = styled(motion.div)`
     transition: color 0.8s ease;
     z-index: 999;
     background-color: var(--bg-black-900);
+    border: 2px solid #0042ff;
 
     ::before {
-      content: attr(data-text);
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-color: var(--bg-black-900);
-      border: 2px solid #0042ff;
-      height: 100%;
-      width: 100%;
-      color: #0042ff;
-      padding: 12px 20px;
-      box-sizing: border-box;
-      transition: transform 0.5s ease;
-      transform-origin: bottom;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 5px;
+      /* content: attr(data-text);
+             position: absolute;
+             left: 0;
+             top: 0;
+             background-color: var(--bg-black-900);
+             border: 2px solid #0042ff;
+             height: 100%;
+             width: 100%;
+             color: #0042ff;
+             padding: 12px 20px;
+             box-sizing: border-box;
+             transition: transform 0.5s ease;
+             transform-origin: bottom;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             border-radius: 5px; */
     }
 
-    :hover::before {
-      transform: rotateX(20deg);
+    :hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 5px #00000080;
+      /* text-shadow: 0 0 2px #0042ff; */
     }
   }
 
