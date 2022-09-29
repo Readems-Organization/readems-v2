@@ -2,9 +2,8 @@ const SubscribesEmail = require('../model/subscribeModel');
 
 const SubscribeControllers = {
   subscribesEmail: async (req, res) => {
-    const { email } = req.body;
-
     try {
+      const { email } = req.body;
       if (!email)
         return res.status(400).json({ error: 'Please enter your email' });
 
@@ -12,7 +11,7 @@ const SubscribeControllers = {
       if (exitsEmail)
         return res
           .status(400)
-          .json({ error: 'The user with this email already subscribed' });
+          .json({ error: 'The user with this email already subscribed.' });
 
       const newSubscriber = new SubscribesEmail({ email });
 
@@ -20,7 +19,7 @@ const SubscribeControllers = {
 
       res.status(201).json({
         newSubscriber,
-        message: 'Thank you for subscribing!!!',
+        message: 'Thank you for subscribing to our newsletter!!!',
       });
     } catch (err) {
       return res.status(500).json({ error: err.message });

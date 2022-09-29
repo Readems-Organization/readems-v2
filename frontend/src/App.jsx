@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/header/mainHeader/Header';
 import { Books, Signin, Waitlists, LandingPage, SignUp } from './routes';
 import { AppContainer } from './components/styles/Global';
+import { toast } from 'react-toastify';
 
 // import Translate from './Translate';
 
@@ -22,6 +23,8 @@ const App = () => {
   useEffect(() => {
     changeColor();
   }, []);
+
+  toast.configure();
 
   const user = false;
 
