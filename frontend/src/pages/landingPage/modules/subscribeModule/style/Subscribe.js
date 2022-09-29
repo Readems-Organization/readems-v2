@@ -61,13 +61,44 @@ export const StyledSubscribeContainer = styled(motion.div)`
 export const StyledJoinReademsContainer = styled(motion.div)`
   margin: 40px 0;
   margin-bottom: 50px;
+  text-align: center;
   h2 {
     margin-bottom: 20px;
     font-size: 6.4rem;
     line-height: 7.7rem;
   }
-  button {
-    margin: 0 auto;
+  button a {
+    /* margin: 0 auto; */
+    width: 177px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    background-color: #0042ff;
+    color: #fff;
+    position: relative;
+
+    :hover {
+      animation: ripple 1s linear infinite;
+    }
+
+    @keyframes ripple {
+      0% {
+        width: 150px;
+        height: 48px;
+        opacity: 0.5px;
+      }
+      100% {
+        width: 220px;
+        height: 69px;
+        opacity: 0.2;
+      }
+    }
   }
 `;
 
@@ -75,5 +106,50 @@ export const StyledNewsLetterContainer = styled(motion.div)`
   margin-top: 100px;
   h2 {
     margin-bottom: 20px;
+  }
+
+  button {
+    background-color: transparent;
+    color: #fff;
+    /* border: 1px solid #fff; */
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    perspective: 50px;
+    width: 252px;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: color 0.8s ease;
+    z-index: 999;
+
+    ::before {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #0042ff;
+      border: 1px solid #fff;
+      height: 100%;
+      width: 100%;
+      color: #fff;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      transition: transform 1s ease;
+      transform-origin: bottom;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    :hover::before {
+      transform: rotateX(20deg);
+    }
   }
 `;

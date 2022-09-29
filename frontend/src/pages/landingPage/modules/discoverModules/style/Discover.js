@@ -48,6 +48,51 @@ export const StyledDiscoverContent = styled(motion.div)`
     color: #fff;
   }
 
+  button {
+    background-color: transparent;
+    color: #fff;
+    /* border: 1px solid #fff; */
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    perspective: 50px;
+    width: 252px;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: color 0.8s ease;
+    z-index: 999;
+
+    ::before {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #0042ff;
+      border: 1px solid #fff;
+      height: 100%;
+      width: 100%;
+      color: #fff;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      transition: transform 1s ease;
+      transform-origin: bottom;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    :hover::before {
+      transform: rotateX(20deg);
+    }
+  }
+
   @media (max-width: ${({ theme }) => theme.mobile.size420}) {
     height: 200px;
     div {
@@ -96,7 +141,48 @@ export const StyledDiscoverWriterContent = styled(motion.div)`
     margin: 30px 0;
   }
   button {
-    margin: auto;
+    background-color: transparent;
+    color: #fff;
+    /* border: 1px solid #fff; */
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    perspective: 50px;
+    width: 252px;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: color 0.8s ease;
+    z-index: 999;
+
+    ::before {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #0042ff;
+      border: 1px solid #fff;
+      height: 100%;
+      width: 100%;
+      color: #fff;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      transition: transform 1s ease;
+      transform-origin: bottom;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    :hover::before {
+      transform: rotateX(20deg);
+    }
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size900}) {

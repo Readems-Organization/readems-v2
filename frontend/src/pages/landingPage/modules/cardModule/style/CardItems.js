@@ -55,7 +55,8 @@ export const StyledCardItemsContainer = styled.div`
     `}
 
   @media (max-width: ${({ theme }) => theme.mobile.size420}) {
-   height: 350px;
+   width: 100%;
+   height: auto;
 
    h4 {
     font-weight: 400px;
@@ -67,9 +68,8 @@ export const StyledCardItemsContainer = styled.div`
   }
 
    @media (max-width: ${({ theme }) => theme.mobile.size375}) {
-   height: 380px;
     img {
-    width: 50px;
+    width: 80px;
     margin-bottom: 50px;
   }
   }

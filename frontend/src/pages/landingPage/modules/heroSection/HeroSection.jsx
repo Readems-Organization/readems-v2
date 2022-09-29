@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '../../../../components/buttons/Button';
 import {
   StyledHeroSectionContainer,
   StyledHeroSection,
@@ -13,18 +12,26 @@ const HeroSection = () => {
   return (
     <StyledHeroSectionContainer>
       <StyledHeroSection>
-        <StyledHeroSectionLeft>
+        <StyledHeroSectionLeft
+          initial={{ x: '-100vw ' }}
+          animate={{ x: 0 }}
+          transition={{ delay: 1, type: 'spring', stiffness: 120 }}
+        >
           <h2>Read, write, and earn</h2>
           <p>
             Write and discover books, stories, and articles based on your
             interests and get rewarded while at it.
           </p>
           <StyledButtonWrapper>
-            <Button primary>Start reading</Button>
-            <Button secondary>Start writing</Button>
+            <button data-text='Start reading'>Start reading</button>
+            <button data-text='Start writing'>Start writing</button>
           </StyledButtonWrapper>
         </StyledHeroSectionLeft>
-        <StyledHeroSectionRight>
+        <StyledHeroSectionRight
+          initial={{ x: '100vw ' }}
+          animate={{ x: 0 }}
+          transition={{ delay: 1, type: 'spring', stiffness: 120 }}
+        >
           <img src='/svgs/Group-pics.png' alt='' />
         </StyledHeroSectionRight>
       </StyledHeroSection>
