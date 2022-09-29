@@ -25,24 +25,27 @@ export const Footer = () => {
 
         <Styles.StyledFooterLogoContainer>
           <div>
-            <Link to='https://www.facebook.com/ReademsHQ' target='_blank'>
+            <a href='https://www.facebook.com/ReademsHQ' target='_blank'>
               <AppIcon.Facebook />
-            </Link>
+            </a>
           </div>
           <div>
-            <Link to='https://www.twitter.com/Readems_HQ' target='_blank'>
+            <a href='https://www.twitter.com/Readems_HQ' target='_blank'>
               <AppIcon.Twitter />
-            </Link>
+            </a>
           </div>
           <div>
-            <Link to='https://www.instagram.com/Readems_hq' target='_blank'>
+            <a href='https://www.instagram.com/Readems_hq' target='_blank'>
               <AppIcon.Instagram />
-            </Link>
+            </a>
           </div>
           <div>
-            <Link to='https://www.facebook.com/ReademsHQ' target='_blank'>
+            <a
+              href='https://www.linkedin.com/in/readems-hq-48aba2251/'
+              target='_blank'
+            >
               <AppIcon.Linkedin />
-            </Link>
+            </a>
           </div>
         </Styles.StyledFooterLogoContainer>
       </Styles.StyledFooterContainer>
