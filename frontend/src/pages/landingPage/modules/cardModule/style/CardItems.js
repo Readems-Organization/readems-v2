@@ -30,6 +30,16 @@ export const StyledCardItemsContainer = styled(motion.div)`
 
  }
 
+ @media (max-width: ${({ theme }) => theme.mobile.size420}) {
+   p {
+
+        font-size: 2.9rem;
+    line-height: 3.3rem;
+    font-weight: 400px;
+
+ }
+ }
+
  ${(props) =>
    props.firstCard &&
    css`

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const StyledDiscoverTopicsContainer = styled(motion.ul)`
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -52,7 +52,9 @@ export const StyledDiscoverTopicsContainer = styled(motion.ul)`
     }
   }
 
-  @media (max-width: ${({ theme }) => theme.mobile.size375}) {
-    flex-direction: column;
+  @media (max-width: ${({ theme }) => theme.mobile.size420}) {
+    /* flex-direction: column; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 `;

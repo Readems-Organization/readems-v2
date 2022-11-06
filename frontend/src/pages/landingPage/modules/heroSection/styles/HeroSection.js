@@ -9,12 +9,16 @@ export const StyledHeroSection = styled(motion.div)`
   display: flex;
   justify-content: center;
   background-color: #0042ff;
-  padding: 150px 0;
+  padding: 150px 20px;
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
     flex-direction: column-reverse;
     max-width: 500px;
     margin: 0 auto;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile.size420}) {
+    padding: 150px 20px;
   }
 `;
 
