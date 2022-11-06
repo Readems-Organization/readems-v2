@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+
 import { FaMoon, FaSun } from 'react-icons/fa';
 import {
   StyledSidebarContainer,
@@ -20,13 +22,15 @@ const containerVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: {
-      type: 'spring',
-    },
+    // transition: {
+    //   type: 'spring',
+    // },
+    transition: { delay: 0.2, type: 'spring', stiffness: 120 },
   },
   exit: {
     x: '-100vw',
-    transition: { type: 'spring' },
+    // transition: { type: 'spring' },
+    transition: { delay: 0.2, type: 'spring', stiffness: 120 },
   },
 };
 
@@ -54,66 +58,71 @@ const Sidebar = ({ setIsOpen }) => {
   }, []);
 
   return (
-    <StyledSidebarContainer
+    <AnimatePresence
       variants={containerVariants}
       initial='hidden'
       animate='visible'
       exit='exit'
     >
-      <StyledSidebarHeader>
-        <StyledSidebarBtnWrapper>
-          <button type='button' onClick={() => setIsOpen(false)}>
-            <AppIcon.Close />
-          </button>
-        </StyledSidebarBtnWrapper>
+      <StyledSidebarContainer>
+        <StyledSidebarHeader>
+          <StyledSidebarBtnWrapper>
+            <button type='button' onClick={() => setIsOpen(false)}>
+              <AppIcon.Close />
+            </button>
+          </StyledSidebarBtnWrapper>
 
-        <StyledSearchBox>
-          <Search height='25' width='25' />
-          <input type='text' placeholder='Search for writers or publications' />
-        </StyledSearchBox>
-      </StyledSidebarHeader>
+          <StyledSearchBox>
+            <Search height='25' width='25' />
+            <input
+              type='text'
+              placeholder='Search for writers or publications'
+            />
+          </StyledSearchBox>
+        </StyledSidebarHeader>
 
-      <li onClick={handleNightDay} style={{ cursor: 'pointer' }}>
-        {!night ? (
-          <StyledNightDayWrapper>
-            <FaSun />
-            <span>Light Mode</span>
-          </StyledNightDayWrapper>
-        ) : (
-          <StyledNightDayWrapper>
-            <FaMoon />
-            <span>Night Mode</span>
-          </StyledNightDayWrapper>
-        )}
-      </li>
+        <li onClick={handleNightDay} style={{ cursor: 'pointer' }}>
+          {!night ? (
+            <StyledNightDayWrapper>
+              <FaSun />
+              <span>Light Mode</span>
+            </StyledNightDayWrapper>
+          ) : (
+            <StyledNightDayWrapper>
+              <FaMoon />
+              <span>Night Mode</span>
+            </StyledNightDayWrapper>
+          )}
+        </li>
 
-      <StyledListItems>
-        <li>
-          <NavLink to='/' onClick={() => setIsOpen(false)}>
-            <Explore height='30' width='30' />
-            <span>Explore</span>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to='/' onClick={() => setIsOpen(false)}>
-            <Pricing height='30' width='30' />
-            <span>Pricing</span>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to='/' onClick={() => setIsOpen(false)}>
-            <Writers height='30' width='30' />
-            <span>Writers</span>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to='/' onClick={() => setIsOpen(false)}>
-            <Readers height='30' width='30' />
-            <span>Readers</span>
-          </NavLink>
-        </li>
-      </StyledListItems>
-    </StyledSidebarContainer>
+        <StyledListItems>
+          <li>
+            <NavLink to='/' onClick={() => setIsOpen(false)}>
+              <Explore height='30' width='30' />
+              <span>Explore</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to='/' onClick={() => setIsOpen(false)}>
+              <Pricing height='30' width='30' />
+              <span>Pricing</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to='/' onClick={() => setIsOpen(false)}>
+              <Writers height='30' width='30' />
+              <span>Writers</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to='/' onClick={() => setIsOpen(false)}>
+              <Readers height='30' width='30' />
+              <span>Readers</span>
+            </NavLink>
+          </li>
+        </StyledListItems>
+      </StyledSidebarContainer>
+    </AnimatePresence>
   );
 };
 

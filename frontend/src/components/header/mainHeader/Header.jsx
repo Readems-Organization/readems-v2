@@ -65,9 +65,7 @@ const Header = () => {
           onClick={() => setIsOpen(true)}
         />
       </Styles.StyledHeaderContainer>
-      <AnimatePresence>
-        {isOpen && <Sidebar setIsOpen={() => setIsOpen(false)} />}
-      </AnimatePresence>
+      <>{isOpen && <Sidebar setIsOpen={() => setIsOpen(false)} />}</>
     </>
   );
 };
