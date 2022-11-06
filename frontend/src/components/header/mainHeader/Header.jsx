@@ -12,7 +12,7 @@ const Header = () => {
       <Styles.StyledHeaderContainer>
         <div>
           <Styles.StyledLogo
-            src='/svgs/Logo.svg'
+            src='/svgs/Logo-3.svg'
             alt=''
             initial={{ y: -550 }}
             animate={{ y: 0 }}
@@ -20,7 +20,7 @@ const Header = () => {
           />
 
           <Styles.StyledLogoSmall
-            src='/svgs/Logo-1.svg'
+            src='/svgs/Logo-Sm.svg'
             alt=''
             initial={{ y: -550 }}
             animate={{ y: 0 }}
@@ -30,13 +30,16 @@ const Header = () => {
 
         <Styles.StyledHeaderNav>
           <li>
+            <NavLink to='/explore'>Explore</NavLink>
+          </li>
+          <li>
+            <NavLink to='/pricing'>Pricing</NavLink>
+          </li>
+          <li>
             <NavLink to='/writers'>Writers</NavLink>
           </li>
           <li>
             <NavLink to='/readers'>Readers</NavLink>
-          </li>
-          <li>
-            <NavLink to='/resources'>Resources</NavLink>
           </li>
         </Styles.StyledHeaderNav>
 
@@ -54,7 +57,7 @@ const Header = () => {
           </Link>
         </Styles.StyledButtonWrapper>
         <Styles.StyledLogoMenu
-          src='/svgs/menu.svg'
+          src='/svgs/menu-white.svg'
           alt=''
           initial={{ y: -550 }}
           animate={{ y: 0 }}

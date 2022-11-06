@@ -2,12 +2,14 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledHeroSectionContainer = styled(motion.div)`
-  margin-top: 150px;
+  /* padding-top: 150px; */
 `;
 
 export const StyledHeroSection = styled(motion.div)`
   display: flex;
   justify-content: center;
+  background-color: #0042ff;
+  padding: 150px 0;
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
     flex-direction: column-reverse;
@@ -20,7 +22,8 @@ export const StyledHeroSectionLeft = styled(motion.div)`
   width: 670px;
 
   h2 {
-    color: var(--text-black-900);
+    /* color: var(--text-black-900); */
+    color: #fff;
     font-size: 6.9rem;
     font-weight: 700;
     line-height: 8.3rem;
@@ -28,7 +31,8 @@ export const StyledHeroSectionLeft = styled(motion.div)`
   }
 
   p {
-    color: var(--text-black-900);
+    /* color: var(--text-black-900); */
+    color: #fff;
     font-size: 4rem;
     font-weight: 400;
     line-height: 4.8rem;
@@ -56,8 +60,8 @@ export const StyledButtonWrapper = styled.div`
   align-items: center;
   margin: auto;
   gap: 40px;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 120px;
+  margin-bottom: 20px;
 
   @media (max-width: ${({ theme }) => theme.mobile.size768}) {
     justify-content: center;
@@ -81,6 +85,7 @@ export const StyledButtonWrapper = styled.div`
     font-weight: 700;
     line-height: 24px;
     background-color: #0042ff;
+    border: 1px solid #fff;
 
     ::before {
       /* content: attr(data-text);

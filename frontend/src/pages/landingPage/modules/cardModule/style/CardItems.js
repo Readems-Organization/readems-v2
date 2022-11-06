@@ -6,7 +6,9 @@ export const StyledCardItemsContainer = styled(motion.div)`
   height: 553px;
   padding: 19px 39px;
   text-align: center;
-  color: #fff;
+  /* color: #000; */
+    background-color: var(--bg-black-900);
+   /* color: var(--bg-black-900); */
 
   img {
     width: 80px;
@@ -24,12 +26,16 @@ export const StyledCardItemsContainer = styled(motion.div)`
     font-size: 1.9rem;
     line-height: 2.3rem;
     font-weight: 400px;
+   /* color:var(--bg-black-900); */
+
  }
 
  ${(props) =>
    props.firstCard &&
    css`
-     background-color: #7280ff;
+     /* background-color: #7280ff; */
+     /* background-color: var(--bg-black-900); */
+     /* color: var(--bg-black-900); */
 
      h4 {
        font-size: 3.8rem;
@@ -41,13 +47,15 @@ export const StyledCardItemsContainer = styled(motion.div)`
   ${(props) =>
     props.secondCard &&
     css`
-      background-color: #f7c8d0;
+      /* background-color: #f7c8d0; */
+      /* background-color: #fff; */
     `}
 
   ${(props) =>
     props.thirdCard &&
     css`
-      background-color: #747477;
+      /* background-color: #747477; */
+      /* background-color: #fff; */
 
       img {
         width: 120px;

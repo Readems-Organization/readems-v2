@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledHeaderContainer = styled(motion.header)`
+  max-width: 1800px;
   width: 100%;
   height: 70px;
   display: flex;
@@ -13,7 +14,8 @@ export const StyledHeaderContainer = styled(motion.header)`
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  background: var(--bg-black-900);
+  /* background: var(--bg-black-900); */
+  background-color: #0042ff;
   z-index: 1000;
   padding: 0 20px;
   /* border: 2px solid red; */
@@ -64,11 +66,13 @@ export const StyledHeaderNav = styled(motion.ul)`
   li a {
     display: flex;
     align-items: center;
-    color: #060508;
+    /* color: #060508; */
+    color: #fff;
     text-transform: capitalize;
     font-weight: 400;
     font-size: 19px;
     line-height: 23px;
+    opacity: 0.9;
   }
 
   @media (max-width: ${({ theme }) => theme.mobile.size920}) {
@@ -99,6 +103,7 @@ export const StyledButtonWrapper = styled(motion.div)`
     background-color: #0042ff;
     color: #fff;
     z-index: 999;
+    border: 1px solid #fff;
 
     ::before {
       /* content: '';
@@ -131,7 +136,7 @@ export const StyledButtonWrapper = styled(motion.div)`
   }
 
   a:first-child {
-    color: #0042ff;
+    color: #fff;
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -147,8 +152,8 @@ export const StyledButtonWrapper = styled(motion.div)`
     font-weight: 700;
     transition: color 0.8s ease;
     z-index: 999;
-    background-color: var(--bg-black-900);
-    border: 2px solid #0042ff;
+    background-color: #0042ff;
+    /* border: 2px solid #0042ff; */
 
     ::before {
       /* content: attr(data-text);

@@ -10,8 +10,10 @@ import { Subscribe } from './modules/subscribeModule/Subscribe';
 const LandingPage = () => {
   return (
     <div>
-      <Header />
-      <HeroSection />
+      <div>
+        <Header />
+        <HeroSection />
+      </div>
       <CardModule />
       <PopularReads />
       <Discover />

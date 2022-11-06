@@ -14,7 +14,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root{
-   --bg-black-900: #ffffff;
+   /* --bg-black-900: #ffffff; */
+   --bg-black-900: #eff0f4;
   --bg-black-100: #353535;
   --bg-black-50: #2b2c2f;
   --bg-opacity: rgba(43, 44, 47, 0.5);
@@ -32,7 +33,8 @@ export const GlobalStyle = createGlobalStyle`
 
 
   body.dark{
- --bg-black-900: #000000;
+ /* --bg-black-900: #000000; */
+ --bg-black-900:  #2b2c2f;
   --bg-black-100: #dddddd;
   --bg-black-50: #eff0f4;
   --bg-opacity: rgba(255, 255, 255, 0.5);
@@ -62,6 +64,7 @@ html {
 body {
   background-color: var(--bg-black-900);
   color: var(--text-black-900);
+
 }
 
   /* html {
@@ -76,7 +79,7 @@ body {
   }
   } */
 
-  body, h1, h2, h3, h4, h5, h6, p, ol, ul, button, span {
+  h1, h2, h3, h4, h5, h6, p, ol, ul, button, span {
     margin: 0;
     padding: 0;
   }
@@ -122,11 +125,11 @@ body {
 `;
 
 export const AppContainer = styled.div`
-  max-width: 1500px;
+  /* padding: 0 30px; */
+  overflow: hidden;
+  max-width: 1800px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 30px;
-  overflow: hidden;
 
   .google {
     border: 5px solid yellow;
